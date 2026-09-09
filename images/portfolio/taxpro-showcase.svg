@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042017"/>
+      <stop offset="50%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="tp-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="tp-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#tp-bg)"/>
+
+  <!-- Glowing background circles -->
+  <circle cx="200" cy="220" r="160" fill="#10b981" opacity="0.12"/>
+  <circle cx="640" cy="380" r="180" fill="#34d399" opacity="0.1"/>
+
+  <!-- Left: Phone Mockup with CA & Tax Dashboard -->
+  <g transform="translate(100, 40)" filter="url(#tp-shadow)">
+    <rect width="250" height="500" rx="36" fill="#0b1713" stroke="#1e3a2f" stroke-width="4"/>
+    <rect x="8" y="8" width="234" height="484" rx="30" fill="#05140f"/>
+    <rect x="85" y="16" width="80" height="12" rx="6" fill="#122b22"/>
+
+    <!-- App Header -->
+    <g transform="translate(20, 40)">
+      <text x="0" y="16" fill="#6ee7b7" font-family="sans-serif" font-size="10">PARTNER PORTAL</text>
+      <text x="0" y="36" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800">TaxPro Partner</text>
+      <rect x="135" y="20" width="75" height="20" rx="10" fill="#10b981"/>
+      <text x="172" y="34" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">VERIFIED CA</text>
+    </g>
+
+    <!-- Partner Balance Card -->
+    <g transform="translate(20, 90)">
+      <rect width="210" height="95" rx="12" fill="url(#tp-teal)"/>
+      <text x="16" y="26" fill="#d1fae5" font-family="sans-serif" font-size="11">Total Payout Settled</text>
+      <text x="16" y="56" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800">₹ 2,48,900</text>
+      <text x="16" y="78" fill="#ecfdf5" font-family="sans-serif" font-size="10">34 Filings Completed This Month</text>
+    </g>
+
+    <!-- Service modules list -->
+    <g transform="translate(20, 205)">
+      <!-- Module 1: GST Filing -->
+      <rect x="0" y="0" width="210" height="50" rx="8" fill="#0d241c" stroke="#164e3b" stroke-width="1"/>
+      <circle cx="24" cy="25" r="14" fill="#10b981" fill-opacity="0.2"/>
+      <text x="24" y="30" font-size="12" text-anchor="middle">📄</text>
+      <text x="46" y="22" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">GST Return (GSTR-1 &amp; 3B)</text>
+      <text x="46" y="38" fill="#6ee7b7" font-family="sans-serif" font-size="9">12 Pending Filings • Due in 3 days</text>
+
+      <!-- Module 2: ITR Filing -->
+      <rect x="0" y="58" width="210" height="50" rx="8" fill="#0d241c" stroke="#164e3b" stroke-width="1"/>
+      <circle cx="24" cy="83" r="14" fill="#3b82f6" fill-opacity="0.2"/>
+      <text x="24" y="88" font-size="12" text-anchor="middle">📊</text>
+      <text x="46" y="80" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">ITR Filing &amp; Audit</text>
+      <text x="46" y="96" fill="#93c5fd" font-family="sans-serif" font-size="9">Instant computation &amp; XML upload</text>
+
+      <!-- Module 3: Company Registration -->
+      <rect x="0" y="116" width="210" height="50" rx="8" fill="#0d241c" stroke="#164e3b" stroke-width="1"/>
+      <circle cx="24" cy="141" r="14" fill="#f59e0b" fill-opacity="0.2"/>
+      <text x="24" y="146" font-size="12" text-anchor="middle">🏢</text>
+      <text x="46" y="138" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Company &amp; LLP Reg.</text>
+      <text x="46" y="154" fill="#fde68a" font-family="sans-serif" font-size="9">MCA / ROC Documentation</text>
+    </g>
+
+    <!-- Bottom Navigation Bar -->
+    <rect x="8" y="430" width="234" height="60" rx="20" fill="#081c15"/>
+    <text x="45" y="465" font-size="14" text-anchor="middle">🏠</text>
+    <text x="95" y="465" font-size="14" text-anchor="middle">📁</text>
+    <text x="145" y="465" font-size="14" text-anchor="middle">💰</text>
+    <text x="195" y="465" font-size="14" text-anchor="middle">👤</text>
+  </g>
+
+  <!-- Right: Feature Cards & Details -->
+  <g transform="translate(390, 80)">
+    <rect width="195" height="32" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5"/>
+    <text x="97" y="21" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">FINTECH &amp; PARTNER APP</text>
+
+    <text x="0" y="75" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800">TaxPro Partner App</text>
+    <text x="0" y="105" fill="#a7f3d0" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="500">Chartered Accountant &amp; Tax Consultant Portal</text>
+
+    <text x="0" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13">
+      <tspan x="0" dy="0">Specialized partner application built for Tax Professionals,</tspan>
+      <tspan x="0" dy="20">CAs, and Legal Consultants to manage client filings,</tspan>
+      <tspan x="0" dy="20">GST reconciliations, and direct revenue disbursements.</tspan>
+    </text>
+
+    <!-- Metric boxes -->
+    <g transform="translate(0, 220)">
+      <rect width="110" height="70" rx="10" fill="#0a2a20" stroke="#165b45" stroke-width="1"/>
+      <text x="20" y="32" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">100%</text>
+      <text x="20" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">Automated Tax</text>
+
+      <rect x="125" y="0" width="110" height="70" rx="10" fill="#0a2a20" stroke="#165b45" stroke-width="1"/>
+      <text x="145" y="32" fill="#6ee7b7" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">Bank-Grade</text>
+      <text x="145" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">256-bit Security</text>
+
+      <rect x="250" y="0" width="110" height="70" rx="10" fill="#0a2a20" stroke="#165b45" stroke-width="1"/>
+      <text x="270" y="32" fill="#fbbf24" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">FlyBizz</text>
+      <text x="270" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">Ecosystem</text>
+    </g>
+
+    <!-- Google Play Button -->
+    <g transform="translate(0, 320)" filter="url(#tp-shadow)">
+      <rect width="260" height="60" rx="12" fill="#000000" stroke="#164e3b" stroke-width="1.5"/>
+      <g transform="translate(20, 16)">
+        <polygon points="4,2 18,14 4,26" fill="#10b981"/>
+        <polygon points="4,2 18,14 12,18 4,14" fill="#34d399"/>
+        <polygon points="4,26 18,14 12,10 4,14" fill="#059669"/>
+        <polygon points="18,14 26,9 22,7" fill="#fbbf24"/>
+      </g>
+      <text x="64" y="26" fill="#94a3b8" font-family="sans-serif" font-size="10">GET IT ON</text>
+      <text x="64" y="46" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">Google Play</text>
+      <circle cx="230" cy="30" r="12" fill="#09261c"/>
+      <text x="230" y="35" fill="#34d399" font-size="14" text-anchor="middle">↗</text>
+    </g>
+  </g>
+</svg>

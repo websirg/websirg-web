@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091428"/>
+      <stop offset="50%" stop-color="#0f2244"/>
+      <stop offset="100%" stop-color="#16305c"/>
+    </linearGradient>
+    <linearGradient id="qd-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="qd-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="qd-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#qd-bg)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="160" cy="180" r="140" fill="#06b6d4" opacity="0.12" filter="url(#qd-glow)"/>
+  <circle cx="680" cy="420" r="160" fill="#3b82f6" opacity="0.15" filter="url(#qd-glow)"/>
+
+  <!-- Browser Window Mockup -->
+  <g transform="translate(80, 50)" filter="url(#qd-shadow)">
+    <rect width="640" height="430" rx="14" fill="#0b172a" stroke="#1e293b" stroke-width="2"/>
+    <rect width="640" height="44" rx="14" fill="#0f1f38"/>
+    <rect y="30" width="640" height="14" fill="#0f1f38"/>
+    <circle cx="28" cy="22" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="22" r="6" fill="#f59e0b"/>
+    <circle cx="68" cy="22" r="6" fill="#10b981"/>
+    
+    <rect x="110" y="10" width="420" height="24" rx="6" fill="#091322" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="130" y="26" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">https://qwickdropsolution.com</text>
+    <circle cx="510" cy="22" r="4" fill="#10b981"/>
+
+    <!-- Dashboard Body -->
+    <g transform="translate(20, 60)">
+      <!-- Sidebar -->
+      <rect width="130" height="350" rx="8" fill="#091324"/>
+      <text x="16" y="32" fill="#06b6d4" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">QwickDrop</text>
+      <text x="16" y="46" fill="#64748b" font-family="sans-serif" font-size="9">LOGISTICS SUITE</text>
+      
+      <rect x="12" y="66" width="106" height="26" rx="6" fill="#06b6d4" fill-opacity="0.18"/>
+      <circle cx="24" cy="79" r="4" fill="#06b6d4"/>
+      <text x="36" y="83" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="600">Dispatch Map</text>
+
+      <circle cx="24" cy="115" r="4" fill="#475569"/>
+      <text x="36" y="119" fill="#94a3b8" font-family="sans-serif" font-size="11">Fleet Tracking</text>
+
+      <circle cx="24" cy="147" r="4" fill="#475569"/>
+      <text x="36" y="151" fill="#94a3b8" font-family="sans-serif" font-size="11">Live Shipments</text>
+
+      <circle cx="24" cy="179" r="4" fill="#475569"/>
+      <text x="36" y="183" fill="#94a3b8" font-family="sans-serif" font-size="11">Analytics</text>
+
+      <!-- Main Portal View -->
+      <g transform="translate(145, 0)">
+        <!-- Top Stats Row -->
+        <rect x="0" y="0" width="140" height="66" rx="8" fill="#0e1e38" stroke="#1a365d" stroke-width="1"/>
+        <text x="12" y="22" fill="#94a3b8" font-family="sans-serif" font-size="10">ACTIVE SHIPMENTS</text>
+        <text x="12" y="48" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700">1,482</text>
+        <text x="80" y="48" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">↑ 18.4%</text>
+
+        <rect x="150" y="0" width="140" height="66" rx="8" fill="#0e1e38" stroke="#1a365d" stroke-width="1"/>
+        <text x="162" y="22" fill="#94a3b8" font-family="sans-serif" font-size="10">DELIVERY RATE</text>
+        <text x="162" y="48" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700">99.4%</text>
+        <text x="235" y="48" fill="#06b6d4" font-family="sans-serif" font-size="11" font-weight="600">On Time</text>
+
+        <rect x="300" y="0" width="145" height="66" rx="8" fill="#0e1e38" stroke="#1a365d" stroke-width="1"/>
+        <text x="312" y="22" fill="#94a3b8" font-family="sans-serif" font-size="10">ONLINE RIDERS</text>
+        <text x="312" y="48" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700">324</text>
+        <circle cx="395" cy="44" r="5" fill="#10b981"/>
+
+        <!-- Map View -->
+        <rect x="0" y="78" width="445" height="230" rx="8" fill="#081120" stroke="#1e3a5f" stroke-width="1"/>
+        <path d="M 40 240 Q 120 170 200 200 T 360 140 T 410 180" fill="none" stroke="#1e3a5f" stroke-width="8" stroke-linecap="round"/>
+        <path d="M 40 240 Q 120 170 200 200 T 360 140" fill="none" stroke="url(#qd-cyan)" stroke-width="4" stroke-dasharray="6,4" stroke-linecap="round"/>
+
+        <circle cx="40" cy="240" r="8" fill="#10b981"/>
+        <circle cx="40" cy="240" r="4" fill="#ffffff"/>
+        <circle cx="200" cy="200" r="6" fill="#06b6d4"/>
+        <circle cx="360" cy="140" r="10" fill="#f97316"/>
+        <circle cx="360" cy="140" r="5" fill="#ffffff"/>
+
+        <g transform="translate(210, 140)">
+          <rect width="200" height="70" rx="6" fill="#0f2244" stroke="#06b6d4" stroke-width="1.5" filter="url(#qd-shadow)"/>
+          <text x="14" y="24" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">Parcel #QD-8924</text>
+          <text x="14" y="42" fill="#94a3b8" font-family="sans-serif" font-size="11">Express Delivery • In Transit</text>
+          <rect x="14" y="52" width="170" height="6" rx="3" fill="#1e3a5f"/>
+          <rect x="14" y="52" width="130" height="6" rx="3" fill="#10b981"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Floating Badge -->
+  <g transform="translate(160, 504)">
+    <rect width="480" height="56" rx="28" fill="#0a182e" stroke="#06b6d4" stroke-width="1.5" filter="url(#qd-shadow)"/>
+    <circle cx="34" cy="28" r="16" fill="#06b6d4"/>
+    <circle cx="34" cy="28" r="9" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+    <ellipse cx="34" cy="28" rx="4" ry="9" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="25" y1="28" x2="43" y2="28" stroke="#ffffff" stroke-width="1.2"/>
+    
+    <text x="62" y="28" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">QwickDrop Solution</text>
+    <text x="62" y="44" fill="#94a3b8" font-family="sans-serif" font-size="11">On-Demand Delivery &amp; Real-Time Logistics Web Portal</text>
+    
+    <rect x="375" y="14" width="90" height="28" rx="14" fill="#06b6d4"/>
+    <text x="420" y="32" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">LIVE WEB ↗</text>
+  </g>
+</svg>

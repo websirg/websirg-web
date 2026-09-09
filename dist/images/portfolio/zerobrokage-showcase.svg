@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="zb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1128"/>
+      <stop offset="50%" stop-color="#101f42"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="zb-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="zb-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="zb-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#zb-bg)"/>
+
+  <!-- Glowing background circles -->
+  <circle cx="220" cy="200" r="160" fill="#3b82f6" opacity="0.12"/>
+  <circle cx="620" cy="380" r="180" fill="#f59e0b" opacity="0.1"/>
+
+  <!-- Left: Stylized Phone Frame Mockup -->
+  <g transform="translate(100, 40)" filter="url(#zb-shadow)">
+    <!-- Phone Bezel -->
+    <rect width="250" height="500" rx="36" fill="#0f172a" stroke="#334155" stroke-width="4"/>
+    <!-- Screen -->
+    <rect x="8" y="8" width="234" height="484" rx="30" fill="#090d16"/>
+    <!-- Top speaker notch -->
+    <rect x="85" y="16" width="80" height="12" rx="6" fill="#1e293b"/>
+    <circle cx="150" cy="22" r="3" fill="#334155"/>
+
+    <!-- App Header -->
+    <g transform="translate(20, 40)">
+      <text x="0" y="16" fill="#64748b" font-family="sans-serif" font-size="10">DELIVER TO: NOIDA / DELHI-NCR</text>
+      <text x="0" y="36" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800">ZeroBrokage</text>
+      <rect x="135" y="20" width="75" height="20" rx="10" fill="url(#zb-orange)"/>
+      <text x="172" y="34" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle">0% BROKERAGE</text>
+    </g>
+
+    <!-- App Search Bar -->
+    <rect x="20" y="90" width="210" height="34" rx="8" fill="#172236" stroke="#1e293b" stroke-width="1"/>
+    <text x="35" y="112" fill="#64748b" font-family="sans-serif" font-size="11">🔍 Search electrician, plumber...</text>
+
+    <!-- Services Grid in Phone -->
+    <g transform="translate(20, 136)">
+      <!-- Item 1: Electrician -->
+      <rect x="0" y="0" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="32" cy="26" r="14" fill="#f59e0b" fill-opacity="0.2"/>
+      <text x="32" y="31" font-size="14" text-anchor="middle">⚡</text>
+      <text x="32" y="55" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Electrician</text>
+
+      <!-- Item 2: Plumber -->
+      <rect x="73" y="0" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="105" cy="26" r="14" fill="#3b82f6" fill-opacity="0.2"/>
+      <text x="105" y="31" font-size="14" text-anchor="middle">🔧</text>
+      <text x="105" y="55" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Plumber</text>
+
+      <!-- Item 3: AC Service -->
+      <rect x="146" y="0" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="178" cy="26" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+      <text x="178" y="31" font-size="14" text-anchor="middle">❄️</text>
+      <text x="178" y="55" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">AC Repair</text>
+
+      <!-- Item 4: Home Cleaning -->
+      <rect x="0" y="76" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="32" cy="102" r="14" fill="#10b981" fill-opacity="0.2"/>
+      <text x="32" y="107" font-size="14" text-anchor="middle">🧹</text>
+      <text x="32" y="131" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Cleaning</text>
+
+      <!-- Item 5: Vehicles -->
+      <rect x="73" y="76" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="105" cy="102" r="14" fill="#8b5cf6" fill-opacity="0.2"/>
+      <text x="105" y="107" font-size="14" text-anchor="middle">🚗</text>
+      <text x="105" y="131" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Mechanic</text>
+
+      <!-- Item 6: Painting -->
+      <rect x="146" y="76" width="64" height="66" rx="10" fill="#131e33" stroke="#1e2d4a" stroke-width="1"/>
+      <circle cx="178" cy="102" r="14" fill="#ec4899" fill-opacity="0.2"/>
+      <text x="178" y="107" font-size="14" text-anchor="middle">🎨</text>
+      <text x="178" y="131" fill="#e2e8f0" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Painting</text>
+    </g>
+
+    <!-- Promotional Banner in Phone -->
+    <rect x="20" y="295" width="210" height="90" rx="12" fill="url(#zb-blue)"/>
+    <text x="34" y="322" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">Verified Pros at Home</text>
+    <text x="34" y="340" fill="#bfdbfe" font-family="sans-serif" font-size="10">Direct contact • No middleman fee</text>
+    <rect x="34" y="352" width="100" height="22" rx="6" fill="#ffffff"/>
+    <text x="84" y="367" fill="#1e40af" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">BOOK NOW</text>
+
+    <!-- Bottom Navigation Bar -->
+    <rect x="8" y="430" width="234" height="60" rx="20" fill="#0b1220"/>
+    <text x="45" y="465" font-size="14" text-anchor="middle">🏠</text>
+    <text x="95" y="465" font-size="14" text-anchor="middle">📋</text>
+    <text x="145" y="465" font-size="14" text-anchor="middle">💬</text>
+    <text x="195" y="465" font-size="14" text-anchor="middle">👤</text>
+  </g>
+
+  <!-- Right: Feature Cards & Badges -->
+  <g transform="translate(390, 80)">
+    <!-- App Pill -->
+    <rect width="180" height="32" rx="16" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="90" y="21" fill="#60a5fa" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle">MOBILE APPLICATION</text>
+
+    <!-- Title -->
+    <text x="0" y="75" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800">ZeroBrokage</text>
+    <text x="0" y="105" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="500">All Home &amp; Vehicle Services Platform</text>
+
+    <text x="0" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" width="360">
+      <tspan x="0" dy="0">A complete hyperlocal marketplace connecting consumers with</tspan>
+      <tspan x="0" dy="20">electricians, plumbers, vehicle mechanics, and home repair</tspan>
+      <tspan x="0" dy="20">professionals directly without commission fees.</tspan>
+    </text>
+
+    <!-- Metric boxes -->
+    <g transform="translate(0, 220)">
+      <rect width="110" height="70" rx="10" fill="#13203c" stroke="#1e3660" stroke-width="1"/>
+      <text x="20" y="32" fill="#f59e0b" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">4.8 ★</text>
+      <text x="20" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">User Rating</text>
+
+      <rect x="125" y="0" width="110" height="70" rx="10" fill="#13203c" stroke="#1e3660" stroke-width="1"/>
+      <text x="145" y="32" fill="#3b82f6" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">50K+</text>
+      <text x="145" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">Downloads</text>
+
+      <rect x="250" y="0" width="110" height="70" rx="10" fill="#13203c" stroke="#1e3660" stroke-width="1"/>
+      <text x="270" y="32" fill="#10b981" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">0%</text>
+      <text x="270" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">Commission</text>
+    </g>
+
+    <!-- Google Play Store Button -->
+    <g transform="translate(0, 320)" filter="url(#zb-shadow)">
+      <rect width="260" height="60" rx="12" fill="#000000" stroke="#334155" stroke-width="1.5"/>
+      <!-- Play Triangle -->
+      <g transform="translate(20, 16)">
+        <polygon points="4,2 18,14 4,26" fill="#3b82f6"/>
+        <polygon points="4,2 18,14 12,18 4,14" fill="#06b6d4"/>
+        <polygon points="4,26 18,14 12,10 4,14" fill="#ea580c"/>
+        <polygon points="18,14 26,9 22,7" fill="#f59e0b"/>
+      </g>
+      <text x="64" y="26" fill="#94a3b8" font-family="sans-serif" font-size="10">GET IT ON</text>
+      <text x="64" y="46" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">Google Play</text>
+      <circle cx="230" cy="30" r="12" fill="#1e293b"/>
+      <text x="230" y="35" fill="#60a5fa" font-size="14" text-anchor="middle">↗</text>
+    </g>
+  </g>
+</svg>

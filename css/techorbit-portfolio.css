@@ -1,0 +1,404 @@
+/**
+ * Websirg - Portfolio Stylesheet
+ * High-performance cards, filter pills, direct link buttons, and modern modal styling.
+ */
+
+.to-portfolio-page {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Category Filter Buttons */
+.portfolio-full .filter-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.portfolio-full .filter-button-group .button {
+    background: #f8fafc;
+    color: #475569;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.portfolio-full .filter-button-group .button:hover {
+    background: #ffffff;
+    border-color: #f97316;
+    color: #f97316;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.15);
+}
+
+.portfolio-full .filter-button-group .button.is-checked {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    border-color: #ea580c;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Portfolio Grid Items */
+.to-project-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 32px);
+}
+
+.to-project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    border-color: #cbd5e1;
+}
+
+/* Card Thumbnail */
+.to-card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #0f172a;
+}
+
+.to-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.to-project-card:hover .to-card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Category Badge on image */
+.to-card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    z-index: 3;
+}
+
+.badge-blue {
+    background: rgba(30, 58, 138, 0.85);
+    color: #93c5fd;
+    border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.badge-cyan {
+    background: rgba(8, 51, 68, 0.85);
+    color: #67e8f9;
+    border: 1px solid rgba(103, 232, 249, 0.3);
+}
+
+.badge-green {
+    background: rgba(6, 78, 59, 0.85);
+    color: #6ee7b7;
+    border: 1px solid rgba(110, 231, 183, 0.3);
+}
+
+.badge-orange {
+    background: rgba(124, 45, 18, 0.85);
+    color: #fed7aa;
+    border: 1px solid rgba(254, 215, 170, 0.3);
+}
+
+.badge-purple {
+    background: rgba(76, 29, 149, 0.85);
+    color: #d8b4fe;
+    border: 1px solid rgba(216, 180, 254, 0.3);
+}
+
+/* Overlay hover */
+.to-card-img-wrapper .to-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 2;
+}
+
+.to-project-card:hover .to-overlay {
+    opacity: 1;
+}
+
+.to-overlay-btn {
+    background: #ffffff;
+    color: #0f172a !important;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.to-overlay-btn:hover {
+    background: #f97316;
+    color: #ffffff !important;
+    transform: scale(1.05);
+}
+
+/* Card Body */
+.to-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.to-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.to-card-title a {
+    color: #0f172a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.to-card-title a:hover {
+    color: #f97316;
+}
+
+.to-card-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+/* Tech Tags */
+.to-tag-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.to-tag-pill {
+    font-size: 11px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Card Action Footer */
+.to-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.to-btn-case-study {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.to-btn-case-study:hover {
+    color: #1d4ed8;
+}
+
+.to-btn-live-link {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffffff !important;
+    background: #0f172a;
+    padding: 7px 16px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.to-btn-live-link:hover {
+    background: #f97316;
+    transform: translateY(-1px);
+}
+
+.to-btn-live-link.playstore {
+    background: #000000;
+}
+
+.to-btn-live-link.playstore:hover {
+    background: #10b981;
+}
+
+/* MODALS STYLING */
+.potfolio-modal .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+}
+
+.potfolio-modal .modal-body {
+    padding: 36px;
+}
+
+.to-modal-preview-img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+    margin-bottom: 20px;
+}
+
+.port-modal-content .gray-text {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f97316 !important;
+    margin-bottom: 8px;
+}
+
+.port-modal-content h2.b-clor {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.port-modal-content .regular-text {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.port-modal-delivered {
+    margin: 24px 0;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.port-modal-delivered h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.port-modal-delivered ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.port-modal-delivered li {
+    font-size: 13.5px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.port-modal-delivered li svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.to-modal-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.to-btn-primary-cta {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff !important;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+
+.to-btn-primary-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(249, 115, 22, 0.4);
+}
+
+.to-btn-playstore-cta {
+    background: #000000;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.to-btn-playstore-cta:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}

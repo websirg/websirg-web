@@ -1,0 +1,546 @@
+/* ============================================
+   Websirg - Home Page Custom Styles
+   ============================================ */
+
+/* ---- How We Work Section ---- */
+.how-we-work-section {
+    padding: 80px 0;
+    background: #f8f9fc;
+}
+
+.how-we-work-section h2 {
+    text-align: center;
+}
+
+.how-we-work-section .section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 15px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.process-steps {
+    margin-top: 50px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.process-step .step-number {
+    font-size: 72px;
+    font-weight: 900;
+    color: #e8eef8;
+    line-height: 1;
+    margin-bottom: -25px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: -3px;
+}
+
+.process-step .step-icon {
+    font-size: 40px;
+    color: #006eeb;
+    display: block;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.process-step h4 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #323a45;
+    margin-bottom: 12px;
+}
+
+.process-step p {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Arrow connector between steps */
+@media (min-width: 992px) {
+    .process-step:not(:last-child)::after {
+        content: '\203A';
+        position: absolute;
+        top: 42%;
+        right: -10px;
+        font-size: 40px;
+        color: #006eeb;
+        opacity: 0.25;
+        font-weight: 900;
+    }
+}
+
+/* ---- Testimonials Section ---- */
+.testimonials-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #006eeb 0%, #0045b8 100%);
+    position: relative;
+}
+
+.testimonials-section h2 {
+    color: #fff !important;
+    text-align: center;
+}
+
+.testimonials-section hr.dark-line {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card .stars {
+    color: #ffc107;
+    font-size: 22px;
+    margin-bottom: 18px;
+    letter-spacing: 3px;
+}
+
+.testimonial-card p {
+    color: #555;
+    font-size: 14.5px;
+    line-height: 1.85;
+    font-style: italic;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: #006eeb;
+    opacity: 0.12;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 18px;
+    margin-top: auto;
+}
+
+.client-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #006eeb, #0045b8);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 110, 235, 0.3);
+}
+
+.client-info strong {
+    display: block;
+    color: #323a45;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.client-info span {
+    color: #999;
+    font-size: 12.5px;
+}
+
+/* ---- Technologies Section ---- */
+.tech-section {
+    padding: 90px 0;
+    background: #f4f7fc;
+}
+
+.tech-section h2 {
+    text-align: center;
+}
+
+.tech-section .section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 15px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.tech-grid {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.tech-item {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.tech-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 15px 22px;
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: default;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.05);
+    border-top: 4px solid transparent;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--brand-color, #006eeb);
+    border-radius: 16px 16px 0 0;
+}
+
+.tech-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--brand-color, #006eeb);
+    opacity: 0.05;
+    transition: all 0.4s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.13), 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.tech-card:hover::after {
+    opacity: 0.1;
+    transform: scale(1.3);
+}
+
+.tech-icon-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 14px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover .tech-icon-img {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.tech-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: 0.3px;
+    display: block;
+}
+
+.tech-card:hover .tech-label {
+    color: var(--brand-color, #006eeb);
+}
+
+/* ---- CTA Banner Section ---- */
+.cta-banner-section {
+    padding: 75px 0;
+    background: #323a45;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner-section::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 250px;
+    height: 250px;
+    background: rgba(0, 110, 235, 0.08);
+    border-radius: 50%;
+}
+
+.cta-banner-section::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 110, 235, 0.05);
+    border-radius: 50%;
+}
+
+.cta-banner-section .cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner-section h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.cta-banner-section p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.cta-banner-section .cta-actions {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 5px;
+}
+
+.cta-btn-outline {
+    display: inline-block;
+    color: #fff !important;
+    border: 2px solid rgba(255, 255, 255, 0.45) !important;
+    background: transparent !important;
+    padding: 10px 25px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* ---- Why Us Section Enhancement ---- */
+.why-us .customise-form {
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 767px) {
+    .how-we-work-section,
+    .testimonials-section,
+    .tech-section,
+    .cta-banner-section,
+    .to-home-blog-section {
+        padding: 55px 0;
+    }
+
+    .cta-banner-section h2 {
+        font-size: 24px;
+    }
+
+    .cta-banner-section .cta-actions {
+        margin-top: 30px;
+    }
+}
+
+/* ============================================
+   Websirg - Home Blog Section Styles
+   ============================================ */
+.to-home-blog-section {
+    padding: 90px 0 80px;
+    background: #f8fafc;
+    position: relative;
+    border-top: 1px solid #eef2f6;
+}
+
+.to-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 110, 235, 0.08);
+    color: #006eeb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.to-section-badge .to-dot {
+    width: 7px;
+    height: 7px;
+    background: #006eeb;
+    border-radius: 50%;
+    animation: toPulse 2s infinite ease-in-out;
+}
+
+.to-section-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1a2332;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.to-section-sub {
+    font-size: 16px;
+    color: #64748b;
+    max-width: 620px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.to-home-blog-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e9edf3;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.to-home-blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 110, 235, 0.12);
+    border-color: #c7ddff;
+}
+
+.to-card-media {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.to-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.to-home-blog-card:hover .to-card-media img {
+    transform: scale(1.08);
+}
+
+.to-card-category {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #006eeb;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 110, 235, 0.4);
+}
+
+.to-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.to-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.to-card-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.to-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.to-card-title a {
+    color: #1e293b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.to-card-title a:hover {
+    color: #006eeb;
+}
+
+.to-card-excerpt {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.to-card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #006eeb;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    margin-top: auto;
+}
+
+.to-card-action:hover {
+    color: #0045b8;
+    gap: 12px;
+    text-decoration: none;
+}

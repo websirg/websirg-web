@@ -1,0 +1,502 @@
+/**
+ * Websirg - Professional Modern Footer Stylesheet
+ * Ultra-modern, responsive, dark-mode agency footer
+ */
+
+/* Main Footer Container */
+.to-pro-footer {
+    background: #090e17;
+    color: #94a3b8;
+    position: relative;
+    font-family: inherit;
+    overflow: hidden;
+}
+
+/* Subtle background accent glow */
+.to-pro-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(234, 88, 12, 0.08) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.to-pro-footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 450px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+/* ===================================================
+   1. PRE-FOOTER CTA & NEWSLETTER CARD
+   =================================================== */
+.to-footer-cta-wrap {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.to-footer-cta-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 20px;
+    padding: 45px 50px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    position: relative;
+    z-index: 2;
+}
+
+.to-footer-cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(234, 88, 12, 0.15);
+    border: 1px solid rgba(234, 88, 12, 0.35);
+    color: #fb923c;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.to-footer-cta-badge .to-cta-dot {
+    width: 7px;
+    height: 7px;
+    background: #ea580c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ea580c;
+    animation: toPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes toPulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.to-footer-cta-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.to-footer-cta-desc {
+    color: #cbd5e1;
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    max-width: 580px;
+}
+
+/* Newsletter Input Form */
+.to-footer-nl-form {
+    display: flex;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 6px 6px 6px 18px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+}
+
+.to-footer-nl-form:focus-within {
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.25);
+}
+
+.to-footer-nl-form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f8fafc;
+    font-size: 14.5px;
+    width: 100%;
+    box-shadow: none;
+}
+
+.to-footer-nl-form input::placeholder {
+    color: #64748b;
+}
+
+.to-footer-nl-btn {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.to-footer-nl-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+    color: #ffffff;
+}
+
+.to-footer-nl-subtext {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.to-footer-nl-subtext span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===================================================
+   2. MAIN FOOTER BODY (COLUMNS)
+   =================================================== */
+.to-footer-main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    position: relative;
+    z-index: 2;
+}
+
+/* Brand Column */
+.to-footer-brand-wrap {
+    margin-bottom: 25px;
+}
+
+.to-footer-logo-badge {
+    display: inline-block;
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.to-footer-logo-badge img {
+    max-height: 40px;
+    width: auto;
+    display: block;
+}
+
+.to-footer-bio {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin-bottom: 22px;
+}
+
+/* Contact Badges */
+.to-footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.to-footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.to-footer-contact-list li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.to-footer-contact-list li a:hover {
+    color: #ea580c;
+}
+
+.to-footer-icon-box {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ea580c;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* Social Buttons */
+.to-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.to-footer-socials a {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.to-footer-socials a:hover {
+    background: #ea580c;
+    border-color: #ea580c;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(234, 88, 12, 0.4);
+}
+
+/* Footer Widget Titles */
+.to-footer-widget-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.to-footer-widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 2.5px;
+    background: #ea580c;
+    border-radius: 2px;
+}
+
+/* Links List */
+.to-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.to-footer-links li a {
+    color: #94a3b8;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.to-footer-links li a::before {
+    content: '›';
+    font-size: 16px;
+    line-height: 1;
+    color: #ea580c;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+.to-footer-links li a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.to-footer-links li a:hover::before {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+/* Trust / Assurance Box */
+.to-footer-trust-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.to-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.to-trust-item:last-child {
+    margin-bottom: 0;
+}
+
+.to-trust-icon {
+    width: 34px;
+    height: 34px;
+    background: rgba(234, 88, 12, 0.12);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ea580c;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.to-trust-text strong {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.to-trust-text span {
+    font-size: 11.5px;
+    color: #64748b;
+}
+
+/* ===================================================
+   3. BOTTOM BAR (SUB-FOOTER)
+   =================================================== */
+.to-footer-bottom {
+    background: #060911;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 22px 0;
+    font-size: 13px;
+    color: #64748b;
+    position: relative;
+    z-index: 2;
+}
+
+.to-footer-bottom a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.to-footer-bottom a:hover {
+    color: #ea580c;
+}
+
+.to-footer-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Floating Back to Top Button */
+.to-back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.4);
+    z-index: 999;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+}
+
+.to-back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.to-back-to-top:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(234, 88, 12, 0.55);
+    color: #ffffff !important;
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN
+   =================================================== */
+@media (max-width: 991px) {
+    .to-footer-cta-card {
+        padding: 30px 24px;
+    }
+
+    .to-footer-cta-title {
+        font-size: 26px;
+    }
+
+    .to-footer-cta-desc {
+        margin-bottom: 25px;
+    }
+
+    .to-footer-bottom-links {
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .to-footer-nl-form {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .to-footer-nl-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .to-footer-nl-subtext {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .to-footer-widget-title {
+        margin-top: 25px;
+    }
+}

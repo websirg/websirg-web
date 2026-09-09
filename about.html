@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us | {{siteName}}</title>
+    <!-- description -->
+    <meta name="description" content="Meet the leadership and team behind Websirg. We engineer scalable mobile applications, web platforms, CRM architectures, and digital growth engines.">
+    <!-- keywords -->
+    <meta name="keywords" content="Websirg, Mobile App Development, CRM Solutions, Web Platforms, Priyanshu Kushwaha, Sahil Prajapati, Ghyoor Qasim, Palak Jain">
+    <meta charset="utf-8">
+    <meta name="author" content="Websirg">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    
+    <!-- ++++ favicon ++++ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/techorbit-header.css" />
+    <link rel="stylesheet" href="css/techorbit-about.css" />
+</head>
+
+<body class="to-about-page">
+    <div id="site-header">
+<!--#include file="components/header.html"-->
+    </div>
+
+    <!-- =========================================================
+         1. HERO CAROUSEL SLIDER
+    ========================================================== -->
+    <div id="aboutHeroCarousel" class="carousel slide carousel-fade to-hero-carousel" data-bs-ride="carousel" data-bs-interval="4500">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Slides -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active slide-1">
+                <div class="to-carousel-overlay">
+                    <div class="container">
+                        <div class="to-slide-caption">
+                            <div class="to-slide-tag">
+                                <span class="to-dot"></span> Digital Transformation &amp; Innovation
+                            </div>
+                            <h1 class="to-slide-title">
+                                Technology That Moves <br />Your Business <span class="to-text-orange">Forward</span>
+                            </h1>
+                            <p class="to-slide-desc">
+                                We combine engineering expertise, business strategy, and user-centric design to develop scalable mobile apps, web platforms, and custom CRM solutions that drive real market impact.
+                            </p>
+                            <div class="to-slide-btns">
+                                <a href="#about-overview" class="to-btn-primary">
+                                    DISCOVER OUR EXPERTISE
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                                <a href="#our-leadership" class="to-btn-secondary">MEET OUR TEAM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item slide-2">
+                <div class="to-carousel-overlay">
+                    <div class="container">
+                        <div class="to-slide-caption">
+                            <div class="to-slide-tag">
+                                <span class="to-dot"></span> Mobile Apps &amp; Hyperlocal Platforms
+                            </div>
+                            <h2 class="to-slide-title">
+                                Engineering Products <br />Built For <span class="to-text-orange">Scale &amp; Speed</span>
+                            </h2>
+                            <p class="to-slide-desc">
+                                From on-demand multi-service applications like ZeroBrokage to automated dispatch systems like QwickDrop, our team delivers high-availability digital architectures.
+                            </p>
+                            <div class="to-slide-btns">
+                                <a href="website-development.html" class="to-btn-primary">
+                                    EXPLORE OUR SERVICES
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                                <a href="contact.html" class="to-btn-secondary">GET IN TOUCH</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item slide-3">
+                <div class="to-carousel-overlay">
+                    <div class="container">
+                        <div class="to-slide-caption">
+                            <div class="to-slide-tag">
+                                <span class="to-dot"></span> Full-Cycle Technology Partner
+                            </div>
+                            <h2 class="to-slide-title">
+                                Reliable Systems, <br />Measurable <span class="to-text-orange">Growth</span>
+                            </h2>
+                            <p class="to-slide-desc">
+                                Bridging the gap between ambitious business vision and flawless technological execution with 24/7 dedicated support, agile development, and transparent collaboration.
+                            </p>
+                            <div class="to-slide-btns">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#getAQuoteModal" class="to-btn-primary">
+                                    START A PROJECT
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                                <a href="tel:{{phone}}" class="to-btn-secondary">CALL +91 9354631515</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- =========================================================
+         2. CORE ABOUT SHOWCASE & PILLARS
+    ========================================================== -->
+    <section class="to-about-wrapper" id="about-overview">
+        <div class="container">
+
+            <!-- Section Intro -->
+            <div class="text-center">
+                <div class="to-pill-badge">
+                    <span class="to-dot"></span> ABOUT WEBSIRG <span class="to-dot"></span>
+                </div>
+                <h2 class="to-main-title">
+                    Building Practical Technology<br />
+                    For Modern <span class="to-text-orange">Industry Leaders</span>
+                </h2>
+                <p class="to-main-subtitle">
+                    Websirg was founded to solve real operational bottlenecks. We combine software craftsmanship with practical business intelligence to help modern businesses outpace their competition.
+                </p>
+            </div>
+
+            <!-- 4 Core Pillars Grid -->
+            <div class="to-pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="to-pillar-card">
+                    <div class="to-pillar-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="to-pillar-title">Scalable Architecture</h3>
+                    <p class="to-pillar-desc">Built with high-throughput cloud backends, microservices, and reactive mobile stacks engineered to scale effortlessly from 1,000 to millions of users.</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="to-pillar-card">
+                    <div class="to-pillar-icon orange">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="to-pillar-title">Enterprise Security</h3>
+                    <p class="to-pillar-desc">Bank-grade data encryption, granular role-based access control, secure payment gateways, and compliance adherence built into every system.</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="to-pillar-card">
+                    <div class="to-pillar-icon teal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10"></path>
+                            <path d="M18 20V4"></path>
+                            <path d="M6 20v-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="to-pillar-title">Business-First Strategy</h3>
+                    <p class="to-pillar-desc">We align engineering directly with your unit economics, customer retention loops, and sales funnels to ensure maximum return on technology investment.</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="to-pillar-card">
+                    <div class="to-pillar-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="to-pillar-title">24/7 Dedicated Support</h3>
+                    <p class="to-pillar-desc">Proactive server telemetry, continuous uptime monitoring, regular feature enhancements, and instant technical support whenever you need it.</p>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 3. DIGITAL INNOVATION FEATURE CARD
+            ========================================================== -->
+            <div class="to-feature-card">
+                <div class="row align-items-center">
+                    <!-- Left Column: Copy & Quick Stats -->
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="to-eyebrow">
+                            <span class="to-line"></span> DIGITAL INNOVATION
+                        </div>
+                        <h3 class="to-sub-heading">
+                            Building Digital Solutions<br />
+                            That Create <span class="to-text-orange">Real Impact.</span>
+                        </h3>
+                        <p class="to-desc-p">
+                            Websirg focuses on creating scalable, user-friendly and business-driven digital products. We work across mobile applications, websites, CRM solutions and digital growth strategies.
+                        </p>
+                        <p class="to-desc-p">
+                            Our approach combines technical expertise with practical business understanding, helping ideas move from concept to a reliable digital solution.
+                        </p>
+
+                        <!-- Stats / Metrics Badges -->
+                        <div class="to-stats-row">
+                            <div class="to-stat-box">
+                                <div class="to-stat-icon blue">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="to-stat-num">5+</div>
+                                    <div class="to-stat-label">Years Expertise</div>
+                                </div>
+                            </div>
+                            <div class="to-stat-box">
+                                <div class="to-stat-icon orange">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="to-stat-num">4</div>
+                                    <div class="to-stat-label">Core Leaders</div>
+                                </div>
+                            </div>
+                            <div class="to-stat-box">
+                                <div class="to-stat-icon teal">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="to-stat-num">24/7</div>
+                                    <div class="to-stat-label">Support Focus</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3 Services Cards + 3D Isometric Art -->
+                    <div class="col-xl-6 col-lg-6 col-md-12 mt-4 mt-lg-0">
+                        <div class="to-right-showcase">
+                            <!-- Services List -->
+                            <div class="to-services-list">
+                                <!-- Service 01 -->
+                                <a href="mobile-app-development.html" class="to-service-item">
+                                    <div class="to-service-icon blue">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="to-service-body">
+                                        <div class="to-service-num">01</div>
+                                        <div class="to-service-title">Mobile App Development</div>
+                                        <p class="to-service-desc">High-performance Android &amp; iOS applications built for customer engagement and operational speed.</p>
+                                    </div>
+                                    <div class="to-service-arrow">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </div>
+                                </a>
+
+                                <!-- Service 02 -->
+                                <a href="website-development.html" class="to-service-item">
+                                    <div class="to-service-icon orange">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="to-service-body">
+                                        <div class="to-service-num">02</div>
+                                        <div class="to-service-title">Web &amp; CRM Solutions</div>
+                                        <p class="to-service-desc">Custom enterprise websites, automated vendor dashboards, and specialized sales CRM panels.</p>
+                                    </div>
+                                    <div class="to-service-arrow">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </div>
+                                </a>
+
+                                <!-- Service 03 -->
+                                <a href="seo.html" class="to-service-item">
+                                    <div class="to-service-icon teal">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="to-service-body">
+                                        <div class="to-service-num">03</div>
+                                        <div class="to-service-title">Digital Growth &amp; Marketing</div>
+                                        <p class="to-service-desc">Performance SEO, targeted advertising, and marketing automation designed for client acquisition.</p>
+                                    </div>
+                                    <div class="to-service-arrow">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- 3D Tech Isometric Illustration -->
+                            <div class="to-illustration-col d-none d-xl-flex">
+                                <div class="to-illustration-wrapper">
+                                    <img src="images/digital-solutions-3d.svg" alt="Digital Solutions Architecture" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 4. OUR LEADERSHIP TEAM SECTION
+            ========================================================== -->
+            <div class="to-leadership-section" id="our-leadership">
+                <div class="to-leadership-eyebrow">
+                    <span class="line"></span> OUR LEADERSHIP <span class="line"></span>
+                </div>
+                <h3 class="to-leadership-title">Meet the Team Behind Websirg</h3>
+                <p class="to-leadership-sub">
+                    A dedicated leadership team combining technical mastery, hands-on development, and strategic execution to build lasting digital solutions.
+                </p>
+
+                <!-- 4 Leadership Cards Grid -->
+                <div class="to-team-grid">
+
+                    <!-- Leader 1: Priyanshu Kushwaha (Founder) -->
+                    <div class="to-leader-card">
+                        <div class="to-card-top-bar bar-blue"></div>
+                        <div class="to-avatar-circle avatar-blue">PK</div>
+                        <div class="to-leader-role">FOUNDER</div>
+                        <h4 class="to-leader-name">Priyanshu Kushwaha</h4>
+                        <div class="to-leader-exp">5+ Years Experience</div>
+                        <p class="to-leader-bio">
+                            Experienced in Mobile App Development, CRM leadership and Digital Marketing, with a focus on building practical technology solutions and driving business growth.
+                        </p>
+                        <div class="to-skill-tags">
+                            <span class="to-tag">Mobile Apps</span>
+                            <span class="to-tag">CRM</span>
+                            <span class="to-tag">Digital Marketing</span>
+                        </div>
+                    </div>
+
+                    <!-- Leader 2: Sahil Prajapati (Co-Founder) -->
+                    <div class="to-leader-card">
+                        <div class="to-card-top-bar bar-orange"></div>
+                        <div class="to-avatar-circle avatar-orange">SP</div>
+                        <div class="to-leader-role">CO-FOUNDER</div>
+                        <h4 class="to-leader-name">Sahil Prajapati</h4>
+                        <div class="to-leader-exp">5+ Years Experience</div>
+                        <p class="to-leader-bio">
+                            Brings strong technical expertise and hands-on experience in Mobile App Development, helping transform product ideas into reliable digital experiences.
+                        </p>
+                        <div class="to-skill-tags">
+                            <span class="to-tag">Mobile Apps</span>
+                            <span class="to-tag">Technical Strategy</span>
+                            <span class="to-tag">Product Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Leader 3: Ghyoor Qasim (Manager) -->
+                    <div class="to-leader-card">
+                        <div class="to-card-top-bar bar-teal"></div>
+                        <div class="to-avatar-circle avatar-teal">GQ</div>
+                        <div class="to-leader-role">MANAGER</div>
+                        <h4 class="to-leader-name">Ghyoor Qasim</h4>
+                        <div class="to-leader-exp">3+ Years Experience</div>
+                        <p class="to-leader-bio">
+                            Focused on Web Development and Digital Marketing, supporting project execution and creating strategies that strengthen a brand's digital presence.
+                        </p>
+                        <div class="to-skill-tags">
+                            <span class="to-tag">Web Development</span>
+                            <span class="to-tag">Digital Marketing</span>
+                            <span class="to-tag">Management</span>
+                        </div>
+                    </div>
+
+                    <!-- Leader 4: Palak Jain (Team Lead) -->
+                    <div class="to-leader-card">
+                        <div class="to-card-top-bar bar-purple"></div>
+                        <div class="to-avatar-circle avatar-purple">PJ</div>
+                        <div class="to-leader-role">TEAM LEAD</div>
+                        <h4 class="to-leader-name">Palak Jain</h4>
+                        <div class="to-leader-exp">3+ Years Experience</div>
+                        <p class="to-leader-bio">
+                            Specializes in CRM Panel operations and Sales Team coordination, helping maintain smooth workflows and stronger customer engagement.
+                        </p>
+                        <div class="to-skill-tags">
+                            <span class="to-tag">CRM Panel</span>
+                            <span class="to-tag">Sales Team</span>
+                            <span class="to-tag">Team Leadership</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 5. BOTTOM CALL TO ACTION
+            ========================================================== -->
+            <div class="to-cta-block">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3 class="to-cta-title">Ready to Build Your Next Digital Product?</h3>
+                        <p class="to-cta-desc">
+                            Partner with Websirg to design, develop, and launch high-performance apps, websites, and business systems tailored to your growth goals.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#getAQuoteModal" class="to-btn-primary">
+                            GET A FREE QUOTE
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer & Modal -->
+    <div id="site-footer">
+<!--#include file="components/footer.html"-->
+    </div>
+
+    <div id="site-quote-modal">
+<!--#include file="components/quote-modal.html"-->
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/site-config.js"></script>
+</body>
+
+</html>
