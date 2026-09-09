@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" width="100%" height="100%" fill="none">
+    <!-- Definitions for gradients & filters -->
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#1d4ed8" />
+        </linearGradient>
+        <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#eff6ff" />
+            <stop offset="100%" stop-color="#dbeafe" />
+        </linearGradient>
+        <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f97316" />
+            <stop offset="100%" stop-color="#ea580c" />
+        </linearGradient>
+        <linearGradient id="chartGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#f97316" stop-opacity="0.2" />
+            <stop offset="100%" stop-color="#f97316" />
+        </linearGradient>
+        <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1e3a8a" flood-opacity="0.18" />
+        </filter>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+
+    <!-- Ambient circular glows -->
+    <circle cx="210" cy="180" r="130" fill="#3b82f6" opacity="0.1" filter="url(#glow)" />
+    <circle cx="280" cy="140" r="80" fill="#f97316" opacity="0.12" filter="url(#glow)" />
+
+    <!-- Isometric Laptop Base -->
+    <g transform="translate(40, 20)">
+        <!-- Base Shadow -->
+        <ellipse cx="180" cy="275" rx="130" ry="30" fill="#0f172a" opacity="0.08" />
+
+        <!-- Laptop Bottom Keyboard Base -->
+        <!-- Front edge -->
+        <polygon points="90,240 210,285 305,235 185,195" fill="#cbd5e1" />
+        <polygon points="90,240 210,285 210,293 90,248" fill="#94a3b8" />
+        <polygon points="210,285 305,235 305,243 210,293" fill="#64748b" />
+        <!-- Trackpad -->
+        <polygon points="175,252 215,268 235,254 195,238" fill="#e2e8f0" />
+
+        <!-- Screen Panel (Isometric Upright) -->
+        <polygon points="90,238 90,120 200,80 200,198" fill="#1e293b" />
+        <!-- Screen Outer Bezel -->
+        <polygon points="92,236 92,122 198,84 198,198" fill="#0f172a" />
+        <!-- Screen Inner Display -->
+        <polygon points="97,230 97,128 193,93 193,195" fill="url(#screenGrad)" />
+
+        <!-- Code lines & window on screen -->
+        <polygon points="104,136 104,142 120,136 120,130" fill="#3b82f6" />
+        <polygon points="104,148 104,152 140,139 140,135" fill="#93c5fd" />
+        <polygon points="104,158 104,162 165,140 165,136" fill="#60a5fa" />
+        <polygon points="104,168 104,172 135,157 135,153" fill="#94a3b8" />
+        <polygon points="104,178 104,182 175,156 175,152" fill="#f97316" />
+        <polygon points="104,188 104,192 150,175 150,171" fill="#3b82f6" />
+        <polygon points="104,198 104,202 180,174 180,170" fill="#22c55e" />
+
+        <!-- Floating UI Element 1: Code Tag Pill </ > -->
+        <g filter="url(#cardShadow)">
+            <rect x="195" y="45" width="70" height="42" rx="12" fill="#2563eb" />
+            <text x="230" y="72" fill="#ffffff" font-size="18" font-family="monospace" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+        </g>
+
+        <!-- Floating UI Element 2: Analytics Chart Card -->
+        <g filter="url(#cardShadow)">
+            <rect x="225" y="95" width="85" height="65" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+            <!-- Bar charts -->
+            <rect x="238" y="130" width="8" height="20" rx="3" fill="#cbd5e1" />
+            <rect x="252" y="122" width="8" height="28" rx="3" fill="#f97316" />
+            <rect x="266" y="114" width="8" height="36" rx="3" fill="#3b82f6" />
+            <rect x="280" y="126" width="8" height="24" rx="3" fill="#10b981" />
+            <!-- Trend line -->
+            <path d="M242,126 Q256,118 270,110 T284,120" stroke="#f97316" stroke-width="2" fill="none" stroke-linecap="round" />
+        </g>
+
+        <!-- Floating UI Element 3: Settings/Doc Card on Left -->
+        <g filter="url(#cardShadow)">
+            <rect x="35" y="115" width="65" height="52" rx="10" fill="#3b82f6" />
+            <!-- Inner doc lines -->
+            <rect x="45" y="127" width="30" height="4" rx="2" fill="#ffffff" />
+            <rect x="45" y="136" width="45" height="4" rx="2" fill="#bfdbfe" />
+            <rect x="45" y="145" width="35" height="4" rx="2" fill="#bfdbfe" />
+        </g>
+
+        <!-- Floating Paper Airplane / Rocket -->
+        <g transform="translate(290, 30)">
+            <polygon points="0,20 30,0 20,25" fill="#3b82f6" />
+            <polygon points="20,25 30,0 12,18" fill="#1d4ed8" />
+            <!-- Flight dash trail -->
+            <path d="M-18,34 Q-6,28 0,20" stroke="#60a5fa" stroke-width="2" stroke-dasharray="3,3" fill="none" stroke-linecap="round" />
+        </g>
+    </g>
+</svg>
