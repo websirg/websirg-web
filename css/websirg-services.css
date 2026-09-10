@@ -1,0 +1,514 @@
+/**
+ * Websirg - Professional Modern Services Page Stylesheet
+ * Used across all 6 service pages: Mobile Apps, Web & CRM, SEO, PPC, Social Media, Branding
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --ws-primary: #f97316;
+  --ws-primary-hover: #ea580c;
+  --ws-dark: #070b14;
+  --ws-dark-surface: #0f172a;
+  --ws-dark-border: rgba(255, 255, 255, 0.08);
+  --ws-light-bg: #f8fafc;
+  --ws-card-border: #e2e8f0;
+  --ws-text-main: #0f172a;
+  --ws-text-muted: #64748b;
+  --ws-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.ws-service-page {
+  font-family: var(--ws-font) !important;
+  color: var(--ws-text-main);
+  background: var(--ws-light-bg);
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   1. SERVICE HERO SECTION (DARK, COMPACT, HIGH-TECH)
+========================================================== */
+.ws-service-hero {
+  position: relative;
+  background: var(--ws-dark);
+  color: #ffffff;
+  padding: 130px 0 55px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ws-dark-border);
+}
+
+.ws-serv-glow-1 {
+  position: absolute;
+  top: -120px;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ws-serv-glow-2 {
+  position: absolute;
+  bottom: -100px;
+  left: 8%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ws-serv-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+.ws-serv-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.ws-serv-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: #fdba74;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ws-serv-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ws-primary);
+  box-shadow: 0 0 10px var(--ws-primary);
+  display: inline-block;
+}
+
+.ws-serv-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.ws-serv-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 24px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ws-serv-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.ws-serv-btn-primary {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
+  transition: all 0.25s ease;
+}
+
+.ws-serv-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(234, 88, 12, 0.5);
+  color: #ffffff !important;
+}
+
+.ws-serv-btn-wa {
+  background: #10b981;
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  transition: all 0.25s ease;
+}
+
+.ws-serv-btn-wa:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+  color: #ffffff !important;
+}
+
+.ws-serv-btn-phone {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1 !important;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.ws-serv-btn-phone:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ws-serv-assurances {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.ws-serv-assurances span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================================================
+   2. CORE CAPABILITIES BENTO SECTION
+========================================================== */
+.ws-serv-section {
+  padding: 50px 0;
+  background: var(--ws-light-bg);
+}
+
+.ws-serv-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.ws-serv-pill-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ws-primary);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ws-serv-section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ws-text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.ws-serv-section-desc {
+  font-size: 14.5px;
+  color: var(--ws-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Capabilities Bento Cards */
+.ws-serv-card {
+  background: #ffffff;
+  border: 1px solid var(--ws-card-border);
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.04);
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ws-serv-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.ws-serv-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff7ed;
+  color: var(--ws-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.ws-serv-card h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ws-text-main);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.ws-serv-card p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.ws-serv-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+}
+
+.ws-serv-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ws-serv-card ul li span.icon-check {
+  color: #10b981;
+  font-size: 13px;
+}
+
+/* =========================================================
+   3. FOUR-STEP SPRINT LIFECYCLE
+========================================================== */
+.ws-process-section {
+  padding: 50px 0;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ws-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  .ws-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .ws-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ws-step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 22px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.ws-step-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.ws-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff7ed;
+  color: var(--ws-primary);
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.ws-step-card h5 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ws-text-main);
+  margin-bottom: 8px;
+}
+
+.ws-step-card p {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =========================================================
+   4. TECH STACK & FRAMEWORKS
+========================================================== */
+.ws-tech-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.ws-tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.ws-tech-chip:hover {
+  border-color: var(--ws-primary);
+  color: #ea580c;
+}
+
+/* =========================================================
+   5. SERVICE FAQ ACCORDION
+========================================================== */
+.ws-serv-faq-section {
+  padding: 45px 0 65px;
+  background: #ffffff;
+}
+
+.ws-serv-faq-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 24px;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.ws-serv-faq-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.ws-serv-faq-card h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.ws-serv-faq-card p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   6. BOTTOM SERVICE CTA BANNER
+========================================================== */
+.ws-serv-cta-section {
+  padding: 30px 0 60px;
+  background: var(--ws-light-bg);
+}
+
+.ws-serv-cta-card {
+  background: linear-gradient(135deg, #070b14 0%, #0f172a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 38px 44px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.ws-serv-cta-card h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.ws-serv-cta-card p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+
+@media (max-width: 767px) {
+  .ws-service-hero {
+    padding: 110px 0 45px;
+  }
+  .ws-serv-title {
+    font-size: 30px;
+  }
+  .ws-serv-cta-card {
+    padding: 26px 20px;
+  }
+}

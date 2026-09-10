@@ -40,60 +40,60 @@
 </head>
 
 <body>
+    <!-- Component: Header -->
     <div id="site-header">
 <!-- Websirg Professional Header Component -->
-<link rel="stylesheet" href="css/techorbit-header.css" />
+<link rel="stylesheet" href="css/websirg-header.css" />
 
 <div class="header-wrapper">
-    <!-- most top information -->
+    <!-- Top Announcement & Contact Bar -->
     <header id="top">
-        <div class="to-header-fluid">
+        <div class="ws-header-fluid">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-5 d-none d-md-block">
-                    <div id="custom-search-input">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <button class="btn" type="button"><span class="icon-magnifier"></span></button>
-                            </span>
-                            <input type="text" class="search-query form-control" placeholder="Search services, solutions..." />
-                        </div>
+                    <div class="ws-topbar-badge">
+                        <span class="ws-topbar-dot"></span>
+                        <span>Digital Engineering &bull; Mobile Apps &bull; Enterprise CRM</span>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-7 col-sm-12">
-                    <ul class="header-right">
+                    <ul class="ws-topbar-right">
                         <li>
-                            <a href="tel:9354631515" class="site-phone-link">
+                            <a href="tel:9354631515" class="ws-topbar-link site-phone-link">
                                 <span class="icon-telephone"></span>
                                 <span class="site-phone">+91 9354631515</span>
                             </a>
                         </li>
-                        <li><img src="images/separator.png" alt="separator" class="img-responsive" /></li>
                         <li>
-                            <a href="mailto:info@websirg.com" class="site-email-link">
+                            <a href="mailto:info@websirg.com" class="ws-topbar-link site-email-link">
                                 <span class="icon-envelope"></span>
                                 <span class="site-email">info@websirg.com</span>
                             </a>
+                        </li>
+                        <li class="d-none d-xl-inline-flex">
+                            <span class="ws-topbar-link">
+                                <span class="icon-map-marker"></span>
+                                <span>Delhi NCR, India</span>
+                            </span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <!-- end most top information -->
 
-    <!-- navigation -->
+    <!-- Main Navigation Bar -->
     <nav id="navbar-main" class="navbar main-menu navbar-expand-lg">
-        <div class="to-header-fluid d-flex align-items-center justify-content-between">
-            <!-- Brand Logo aligned to the far left -->
+        <div class="ws-header-fluid d-flex align-items-center justify-content-between">
+            <!-- Brand Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.jpeg" alt="Websirg" class="site-logo" />
                 </a>
             </div>
 
-            <!-- Mobile toggle button -->
-            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+            <!-- Mobile Drawer Toggler -->
+            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -101,132 +101,73 @@
 
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!-- 1. Home -->
+                <ul class="navbar-nav">
                     <li><a href="index.html">Home</a></li>
-
-                    <!-- 2. About -->
                     <li><a href="about.html">About</a></li>
 
-                    <!-- 3. Services (Dropdown) -->
+                    <!-- Services Dropdown -->
                     <li class="dropdown">
-                        <a href="#" data-bs-toggle="dropdown" class="dropdown-toggle">Services</a>
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                            <span>Services</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="website-development.html"><span class="icon-laptop-phone"></span>Website Development</a></li>
-                            <li><a href="mobile-app-development.html"><span class="icon-smartphone-embed"></span>Mobile App Development</a></li>
-                            <li><a href="logo-and-branding.html"><span class="icon-palette"></span>Logo &amp; Branding</a></li>
-                            <li><a href="seo.html"><span class="icon-magnifier"></span>Search Engine Optimization</a></li>
-                            <li><a href="pay-per-click.html"><span class="icon-select2"></span>Pay-Per-Click</a></li>
-                            <li><a href="social-media-marketing.html"><span class="icon-share"></span>Social Media Marketing</a></li>
+                            <li>
+                                <a href="mobile-app-development.html">
+                                    <span class="icon-smartphone-embed"></span>
+                                    <span>Mobile App Development</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="website-development.html">
+                                    <span class="icon-laptop-phone"></span>
+                                    <span>Web &amp; Custom CRM Panels</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="seo.html">
+                                    <span class="icon-magnifier"></span>
+                                    <span>Search Engine Optimization</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pay-per-click.html">
+                                    <span class="icon-select2"></span>
+                                    <span>Pay-Per-Click Advertising</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="social-media-marketing.html">
+                                    <span class="icon-share"></span>
+                                    <span>Social Media Marketing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="logo-and-branding.html">
+                                    <span class="icon-palette"></span>
+                                    <span>Logo &amp; Brand Identity</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
-
-                    <!-- 4. Blog (Mega-Menu with content & images) -->
-                    <li class="dropdown to-blog-dropdown">
-                        <a href="blog.html" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu to-blog-megamenu">
-                            <div class="to-blog-mega-header">
-                                <div class="to-blog-mega-title">
-                                    <span class="to-badge-pill">TECH &amp; DIGITAL INSIGHTS</span>
-                                    <h3>Industry Trends, Engineering Best Practices &amp; Guides</h3>
-                                </div>
-                                <a href="blog.html" class="to-blog-view-all-link">
-                                    Browse All Articles
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                                </a>
-                            </div>
-
-                            <div class="to-blog-mega-body">
-                                <!-- Featured Article 1 -->
-                                <a href="blog-details.html" class="to-blog-item">
-                                    <div class="to-blog-thumb">
-                                        <img src="images/blog/why-seo-necessery.jpg" alt="Web Architecture & SEO" />
-                                        <span class="to-category-tag">Web Dev</span>
-                                    </div>
-                                    <div class="to-blog-content">
-                                        <span class="to-blog-date"><i class="icon-calendar-full"></i> Aug 2026</span>
-                                        <h4 class="to-blog-heading">Why High-Performance Web Apps Outperform Generic Sites</h4>
-                                        <p class="to-blog-snippet">Discover how speed, headless tech, and clean UX convert visitors into long-term clients.</p>
-                                        <span class="to-read-more">Read Story &rarr;</span>
-                                    </div>
-                                </a>
-
-                                <!-- Featured Article 2 -->
-                                <a href="blog-details-version-2.html" class="to-blog-item">
-                                    <div class="to-blog-thumb">
-                                        <img src="images/blog/effective-team.jpg" alt="Mobile Architecture" />
-                                        <span class="to-category-tag">Mobile Apps</span>
-                                    </div>
-                                    <div class="to-blog-content">
-                                        <span class="to-blog-date"><i class="icon-calendar-full"></i> Sep 2026</span>
-                                        <h4 class="to-blog-heading">Building Scalable Cross-Platform Mobile Apps with React Native</h4>
-                                        <p class="to-blog-snippet">Architecting apps for seamless 60fps performance and instantaneous offline data sync.</p>
-                                        <span class="to-read-more">Read Story &rarr;</span>
-                                    </div>
-                                </a>
-
-                                <!-- Quick Categories Sidebar -->
-                                <div class="to-blog-sidebar">
-                                    <h5>Explore Categories</h5>
-                                    <ul class="to-category-list">
-                                        <li>
-                                            <a href="blog.html">
-                                                <span class="to-cat-icon icon-laptop-phone"></span>
-                                                <div class="to-cat-text">
-                                                    <strong>Full-Stack Engineering</strong>
-                                                    <small>Frontend &amp; Backend scale</small>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">
-                                                <span class="to-cat-icon icon-smartphone-embed"></span>
-                                                <div class="to-cat-text">
-                                                    <strong>Mobile Ecosystem</strong>
-                                                    <small>iOS, Android &amp; Hybrid</small>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">
-                                                <span class="to-cat-icon icon-palette"></span>
-                                                <div class="to-cat-text">
-                                                    <strong>UI/UX &amp; Branding</strong>
-                                                    <small>Design Systems &amp; Visuals</small>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">
-                                                <span class="to-cat-icon icon-magnifier"></span>
-                                                <div class="to-cat-text">
-                                                    <strong>SEO &amp; Growth Hacking</strong>
-                                                    <small>Organic &amp; Paid Conversions</small>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- 5. Contact -->
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
 
-                    <!-- 8. Get a Quote CTA Button -->
-                    <li class="btn btn-fill" data-bs-toggle="modal" data-bs-target="#getAQuoteModal">
-                        <a href="#">GET A QUOTE <span class="icon-chevron-right"></span></a>
+                    <!-- Quote CTA Button -->
+                    <li>
+                        <a href="start-a-project.html" class="ws-nav-cta">
+                            <span>START A PROJECT</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
-<!-- end navigation -->
-
-</div>
+    </div>
+    <!-- End Component: Header -->
     <!-- ++++ Most Bold Title ++++ -->
     <section class="blog-title">
         <div class="container">
@@ -447,44 +388,39 @@
         </div>
     </section>
     <!-- ++++ end blog Standard content ++++ -->
+    <!-- Component: Footer -->
     <div id="site-footer">
 <!-- Websirg Professional Modern Footer Component -->
-<link rel="stylesheet" href="css/techorbit-footer.css" />
+<link rel="stylesheet" href="css/websirg-footer.css" />
 
 <!-- Floating Back to Top Button -->
-<a href="#top" class="to-back-to-top page-scroll" id="toBackToTop" aria-label="Scroll to top">
+<a href="#top" class="ws-back-to-top page-scroll" id="wsBackToTop" aria-label="Scroll to top">
     <span class="icon-chevron-up"></span>
 </a>
 
-<footer class="to-pro-footer" id="footer">
+<footer class="ws-pro-footer" id="footer">
     <!-- ===================================================
-         1. PRE-FOOTER CTA & NEWSLETTER CARD
+         1. PRE-FOOTER CTA CARD
          =================================================== -->
-    <div class="to-footer-cta-wrap">
+    <div class="ws-footer-cta-wrap">
         <div class="container">
-            <div class="to-footer-cta-card">
+            <div class="ws-footer-cta-card">
                 <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-6 col-md-12">
-                        <div class="to-footer-cta-badge">
-                            <span class="to-cta-dot"></span> START YOUR PROJECT
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="ws-footer-cta-badge">
+                            <span class="ws-cta-dot"></span>
+                            <span>ELEVATE YOUR DIGITAL ARCHITECTURE</span>
                         </div>
-                        <h2 class="to-footer-cta-title">Ready to Supercharge Your Digital Presence?</h2>
-                        <p class="to-footer-cta-desc">
-                            Partner with <span class="site-name">Websirg</span> to engineer scalable web platforms, high-performance mobile apps, and brand identities that convert.
+                        <h3 class="ws-footer-cta-title">Ready to Supercharge Your Digital Presence?</h3>
+                        <p class="ws-footer-cta-desc">
+                            Partner with <span class="site-name">Websirg</span> to engineer scalable mobile apps, custom CRM backbones, and web platforms that drive real commercial scale.
                         </p>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 mt-4 mt-lg-0">
-                        <form class="to-footer-nl-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will keep you updated with our latest insights.'); this.reset();">
-                            <input type="email" required placeholder="Enter your business email..." aria-label="Email address" />
-                            <button type="submit" class="to-footer-nl-btn">
-                                Subscribe Free <span class="icon-chevron-right"></span>
-                            </button>
-                        </form>
-                        <div class="to-footer-nl-subtext">
-                            <span><i class="icon-checkmark"></i> Free bi-weekly insights</span>
-                            <span><i class="icon-lock"></i> 100% Privacy protected</span>
-                            <span><i class="icon-cross-circle"></i> No spam, ever</span>
-                        </div>
+                    <div class="col-xl-5 col-lg-5 col-md-12 mt-3 mt-lg-0 text-lg-end">
+                        <a href="start-a-project.html" class="ws-btn-primary">
+                            <span>GET A FREE ARCHITECTURE QUOTE</span>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -494,22 +430,22 @@
     <!-- ===================================================
          2. MAIN FOOTER CONTENT COLUMNS
          =================================================== -->
-    <div class="to-footer-main">
+    <div class="ws-footer-main">
         <div class="container">
             <div class="row gy-4">
                 <!-- Column 1: Brand & Contact Info -->
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="to-footer-brand-wrap">
-                        <a href="index.html" class="to-footer-logo-badge">
+                    <div class="ws-footer-brand-wrap">
+                        <a href="index.html" class="ws-footer-logo-badge">
                             <img src="images/logo.jpeg" alt="Websirg" class="site-logo" />
                         </a>
-                        <p class="to-footer-bio">
+                        <p class="ws-footer-bio">
                             <span class="site-name">Websirg</span> is an elite digital engineering agency delivering high-velocity web platforms, mobile applications, cloud infrastructures, and digital growth strategies.
                         </p>
 
-                        <ul class="to-footer-contact-list">
+                        <ul class="ws-footer-contact-list">
                             <li>
-                                <div class="to-footer-icon-box">
+                                <div class="ws-footer-icon-box">
                                     <span class="icon-telephone"></span>
                                 </div>
                                 <div>
@@ -519,7 +455,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="to-footer-icon-box">
+                                <div class="ws-footer-icon-box">
                                     <span class="icon-envelope"></span>
                                 </div>
                                 <div>
@@ -529,7 +465,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="to-footer-icon-box">
+                                <div class="ws-footer-icon-box">
                                     <span class="icon-map-marker"></span>
                                 </div>
                                 <div>
@@ -539,70 +475,80 @@
                         </ul>
 
                         <!-- Social links -->
-                        <div class="to-footer-socials">
-                            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+                        <div class="ws-footer-socials">
+                            <a href="#" aria-label="LinkedIn"><span class="icon-linkedin"></span></a>
                             <a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a>
                             <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
-                            <a href="#" aria-label="LinkedIn"><span class="icon-linkedin"></span></a>
+                            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Core Services -->
+                <!-- Column 2: FAQs & Quick Answers -->
                 <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                    <h3 class="to-footer-widget-title">Core Services</h3>
-                    <ul class="to-footer-links">
-                        <li><a href="website-development.html">Website Development</a></li>
-                        <li><a href="mobile-app-development.html">Mobile App Development</a></li>
-                        <li><a href="logo-and-branding.html">Logo &amp; Branding</a></li>
-                        <li><a href="seo.html">Search Engine Optimization</a></li>
-                        <li><a href="pay-per-click.html">Pay-Per-Click Advertising</a></li>
-                        <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                    <h4 class="ws-footer-widget-title">FAQs &amp; Help</h4>
+                    <ul class="ws-footer-links">
+                        <li><a href="faq.html">All Questions (FAQ)</a></li>
+                        <li><a href="faq.html#pricing">Project Pricing &amp; Sprints</a></li>
+                        <li><a href="faq.html#security">NDA &amp; IP Protection</a></li>
+                        <li><a href="faq.html#timeline">Development Timelines</a></li>
+                        <li><a href="faq.html#warranty">60-Day Hypercare</a></li>
+                        <li><a href="contact.html">Support Desk</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 3: Company & Resources -->
                 <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                    <h3 class="to-footer-widget-title">Company</h3>
-                    <ul class="to-footer-links">
+                    <h4 class="ws-footer-widget-title">Company</h4>
+                    <ul class="ws-footer-links">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Websirg</a></li>
-                        <li><a href="blog.html">Latest Tech Blog</a></li>
-                        <li><a href="index.html#why-us">Why Choose Us</a></li>
+                        <li><a href="blog.html">Engineering Blog</a></li>
+                        <li><a href="faq.html">Knowledge Base &amp; FAQ</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+                        <li><a href="terms-conditions.html">Terms of Service</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 4: Assurance & Support -->
+                <!-- Column 4: Assurance & Telemetry -->
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <h3 class="to-footer-widget-title">Why Partner With Us?</h3>
-                    <div class="to-footer-trust-box">
-                        <div class="to-trust-item">
-                            <div class="to-trust-icon">
-                                <span class="icon-lightning"></span>
+                    <h4 class="ws-footer-widget-title">Engineering Assurance</h4>
+                    <div class="ws-footer-trust-box">
+                        <div class="ws-trust-item">
+                            <div class="ws-trust-icon" style="background: rgba(249, 115, 22, 0.15); color: #f97316;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(249, 115, 22, 0.25)"></polygon>
+                                </svg>
                             </div>
-                            <div class="to-trust-text">
-                                <strong>Rapid Sprint Delivery</strong>
-                                <span>Agile development with weekly demos and clear milestones</span>
-                            </div>
-                        </div>
-                        <div class="to-trust-item">
-                            <div class="to-trust-icon">
-                                <span class="icon-shield-check"></span>
-                            </div>
-                            <div class="to-trust-text">
-                                <strong>Enterprise Data Security</strong>
-                                <span>OWASP-compliant architectures &amp; encrypted databases</span>
+                            <div class="ws-trust-text">
+                                <strong>2-Week Agile Sprints</strong>
+                                <span>Rapid deployment cycles with weekly demo reviews and zero surprise delays.</span>
                             </div>
                         </div>
-                        <div class="to-trust-item">
-                            <div class="to-trust-icon">
-                                <span class="icon-bubbles"></span>
+                        <div class="ws-trust-item">
+                            <div class="ws-trust-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(59, 130, 246, 0.25)"></path>
+                                    <polyline points="9 12 11 14 15 10"></polyline>
+                                </svg>
                             </div>
-                            <div class="to-trust-text">
-                                <strong>Direct Tech Consultation</strong>
-                                <span>Talk directly to senior engineers — no sales fluff</span>
+                            <div class="ws-trust-text">
+                                <strong>Bank-Grade Data Security</strong>
+                                <span>OWASP-compliant architectures, strict role-based access &amp; end-to-end encryption.</span>
+                            </div>
+                        </div>
+                        <div class="ws-trust-item">
+                            <div class="ws-trust-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9" stroke="#10b981" stroke-opacity="0.35" fill="rgba(16,185,129,0.15)"></circle>
+                                    <circle cx="12" cy="12" r="3.5" fill="#10b981"></circle>
+                                    <path d="M12 3a9 9 0 0 1 9 9" stroke="#10b981" stroke-width="2.4"></path>
+                                </svg>
+                            </div>
+                            <div class="ws-trust-text">
+                                <strong>Active Cloud Telemetry</strong>
+                                <span>99.9% uptime monitoring and continuous automated health checks.</span>
                             </div>
                         </div>
                     </div>
@@ -614,7 +560,7 @@
     <!-- ===================================================
          3. BOTTOM BAR (COPYRIGHT & CREDITS)
          =================================================== -->
-    <div class="to-footer-bottom">
+    <div class="ws-footer-bottom">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 col-sm-12 text-center text-md-start">
@@ -623,11 +569,11 @@
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-12 text-center text-md-end mt-2 mt-md-0">
-                    <ul class="to-footer-bottom-links">
+                    <ul class="ws-footer-bottom-links">
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><span>•</span></li>
+                        <li><span>&bull;</span></li>
                         <li><a href="terms-conditions.html">Terms of Service</a></li>
-                        <li><span>•</span></li>
+                        <li><span>&bull;</span></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
@@ -636,72 +582,214 @@
     </div>
 </footer>
 
-</div>
-    <div id="site-quote-modal">
-<!-- get a quote modal -->
-<div class="modal fade verticl-center-modal" id="getAQuoteModal" tabindex="-1" role="dialog" aria-labelledby="getAQuoteModal">
-    <div class="modal-dialog getguoteModal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-cross-circle"></span></button>
+<!-- Floating Live Connect & Agent Widget -->
+<div class="ws-floating-connect" id="wsFloatingConnect">
+    <!-- Popup Action Card -->
+    <div class="ws-float-menu-card">
+        <div class="ws-float-card-header">
+            <div>
+                <h5 class="ws-float-card-title">
+                    <span class="ws-float-dot"></span>
+                    <span>Websirg Direct Desk</span>
+                </h5>
+                <p class="ws-float-card-sub">Engineering architects active now</p>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="customise-form">
-                            <form class="email_form" method="post">
-                                <h3>Get a Free Quote</h3>
-                                <div class="form-group customised-formgroup"> <span class="icon-user"></span>
-                                    <input type="text" name="full_name" class="form-control" placeholder="Name" required />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-envelope"></span>
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-telephone"></span>
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone" />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-laptop"></span>
-                                    <input type="text" name="website" class="form-control" placeholder="Website" />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-bubble"></span>
-                                    <textarea name="message" class="form-control" placeholder="Message"></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn btn-fill full-width">GET A QUOTE<span class="icon-chevron-right"></span></button>
-                                </div>
-                            </form>
-                        </div>
+            <button type="button" class="btn-close btn-close-white" style="font-size: 10px; filter: invert(1); opacity: 0.6; cursor: pointer; border: none; background: transparent; color: #fff;" onclick="document.getElementById('wsFloatingConnect').classList.toggle('is-open')" aria-label="Close">&times;</button>
+        </div>
+
+        <div class="ws-float-options">
+            <!-- 1. WhatsApp Action -->
+            <a href="https://wa.me/919354631515?text=Hello%20Websirg%20Team,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="ws-float-action whatsapp">
+                <div class="ws-float-action-icon">
+                    <span class="icon-smartphone-embed"></span>
+                </div>
+                <div class="ws-float-action-info">
+                    <div class="ws-float-action-name">
+                        <span>WhatsApp Chat</span>
+                        <span style="font-size: 10px; color: #10b981; font-weight: 800;">INSTANT</span>
                     </div>
-                    <div class="col-lg-6">
-                        <h3>What’s Next?</h3>
-                        <ul class="list-with-arrow">
-                            <li>An email and phone call from one of our representatives.</li>
-                            <li>A time &amp; cost estimation tailored to your needs.</li>
-                            <li>An in-person or video consultation.</li>
-                        </ul>
-                        <div class="contact-info-box-wrapper">
-                            <div class="contact-info-box"> <span class="icon-telephone"></span>
-                                <div>
-                                    <h6>Give us a call</h6>
-                                    <p><a href="tel:9354631515" class="site-phone-link site-phone">+91 9354631515</a></p>
+                    <div class="ws-float-action-desc">Chat directly with a Tech Lead</div>
+                </div>
+            </a>
+
+            <!-- 2. Call Action -->
+            <a href="tel:9354631515" class="ws-float-action phone site-phone-link">
+                <div class="ws-float-action-icon">
+                    <span class="icon-telephone"></span>
+                </div>
+                <div class="ws-float-action-info">
+                    <div class="ws-float-action-name">
+                        <span>Call Directly</span>
+                        <span style="font-size: 10px; color: #3b82f6; font-weight: 700;">VOICE</span>
+                    </div>
+                    <div class="ws-float-action-desc site-phone">+91 9354631515</div>
+                </div>
+            </a>
+
+            <!-- 3. Email Action -->
+            <a href="mailto:info@websirg.com" class="ws-float-action email site-email-link">
+                <div class="ws-float-action-icon">
+                    <span class="icon-envelope"></span>
+                </div>
+                <div class="ws-float-action-info">
+                    <div class="ws-float-action-name">
+                        <span>Official Email</span>
+                        <span style="font-size: 10px; color: #f97316; font-weight: 700;">24h SLA</span>
+                    </div>
+                    <div class="ws-float-action-desc site-email">info@websirg.com</div>
+                </div>
+            </a>
+
+            <!-- 4. Live Agent / Project Configurator -->
+            <a href="start-a-project.html" class="ws-float-action agent">
+                <div class="ws-float-action-icon">
+                    <span class="icon-laptop-phone"></span>
+                </div>
+                <div class="ws-float-action-info">
+                    <div class="ws-float-action-name">
+                        <span>Live Solutions Agent</span>
+                        <span style="font-size: 10px; color: #a855f7; font-weight: 800;">CONFIGURATOR</span>
+                    </div>
+                    <div class="ws-float-action-desc">Build sprint brief with an architect</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Floating Trigger Button -->
+    <button type="button" class="ws-float-btn" onclick="document.getElementById('wsFloatingConnect').classList.toggle('is-open')" aria-label="Direct Connect Menu">
+        <span class="ws-float-dot"></span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span class="ws-float-label">Connect &bull; Live Agent</span>
+    </button>
+</div>
+    </div>
+    <!-- End Component: Footer -->
+    <!-- Component: Quote Modal -->
+    <div id="site-quote-modal">
+<!-- Websirg Modern Architecture Quote Modal -->
+<div class="modal fade verticl-center-modal" id="getAQuoteModal" tabindex="-1" role="dialog" aria-labelledby="getAQuoteModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="border-radius: 24px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25); font-family: 'Plus Jakarta Sans', sans-serif;">
+            
+            <!-- Modal Header -->
+            <div class="modal-header" style="background: #070b14; padding: 22px 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="ws-modal-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #f97316; box-shadow: 0 0 10px #f97316; display: inline-block;"></span>
+                    <h4 style="color: #ffffff; font-size: 17px; font-weight: 800; margin: 0; letter-spacing: -0.01em;">Websirg Architecture Consultation</h4>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1); opacity: 0.8;"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="padding: 32px 30px; background: #ffffff;">
+                <div class="row gy-4">
+                    <!-- Left Column: Quick Form -->
+                    <div class="col-lg-7">
+                        <div style="margin-bottom: 18px;">
+                            <span style="color: #f97316; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;">QUICK PROJECT INQUIRY</span>
+                            <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 4px 0 6px;">Request a Technical Quote</h3>
+                            <p style="font-size: 13px; color: #64748b; margin: 0;">Our senior tech leads will evaluate your specs and get back to you within 24 hours.</p>
+                        </div>
+
+                        <form class="email_form" id="wsQuoteModalForm" method="post" onsubmit="return handleQuoteModalSubmit(event)">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <input type="text" name="full_name" class="form-control" placeholder="Full Name *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <input type="email" name="email" class="form-control" placeholder="Work Email *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <input type="tel" name="phone" class="form-control" placeholder="WhatsApp / Phone *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <select name="service" class="form-control" style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" required>
+                                        <option value="" disabled selected>Select a Service / Solution *</option>
+                                        <option value="Mobile App Development">Mobile App (iOS / Android)</option>
+                                        <option value="Web & Custom CRM">Web &amp; Custom CRM Platform</option>
+                                        <option value="Cloud & API Infrastructure">Cloud &amp; Backend API</option>
+                                        <option value="SEO & Growth Marketing">SEO &amp; Growth Engine</option>
+                                        <option value="UI/UX Product Design">UI/UX &amp; Product Design</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <textarea name="message" class="form-control" placeholder="Briefly describe your requirements or vision..." required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px; min-height: 90px;"></textarea>
                                 </div>
                             </div>
-                            <div class="contact-info-box"> <span class="icon-envelope"></span>
-                                <div>
-                                    <h6>Send an email</h6>
-                                    <p><a href="mailto:info@websirg.com" class="site-email-link site-email">info@websirg.com</a></p>
-                                </div>
+                            
+                            <div style="display: flex; gap: 10px; align-items: center;">
+                                <button type="submit" class="btn" style="flex-grow: 1; background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); color: #fff; font-weight: 800; font-size: 13.5px; padding: 12px 20px; border-radius: 8px; border: none; letter-spacing: 0.4px;">
+                                    REQUEST ARCHITECTURE QUOTE &rarr;
+                                </button>
                             </div>
+                        </form>
+                        <script>
+                        async function handleQuoteModalSubmit(event) {
+                            event.preventDefault();
+                            const form = event.target;
+                            const btn = form.querySelector('button[type="submit"]');
+                            btn.disabled = true;
+                            btn.innerHTML = '<span>TRANSMITTING TO WEBSIRG...</span>';
+
+                            if (window.submitWebsirgForm) {
+                                await window.submitWebsirgForm(form, {
+                                    formType: 'Quote Consultation Modal',
+                                    subject: '⚡ Quick Architecture Quote Request'
+                                });
+                            }
+
+                            form.innerHTML = `
+                                <div style="text-align: center; padding: 25px 10px;">
+                                    <div style="width: 52px; height: 52px; border-radius: 50%; background: #ecfdf5; color: #10b981; font-size: 26px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px solid #a7f3d0;">✓</div>
+                                    <h3 style="font-size: 20px; font-weight: 800; color: #065f46; margin-bottom: 6px;">Quote Request Transmitted!</h3>
+                                    <p style="font-size: 13.5px; color: #047857; margin-bottom: 18px; line-height: 1.55;">Your project parameters have been transmitted directly to <strong>websirg@gmail.com</strong>. Our senior technical architect will evaluate your requirements and contact you within 24 hours.</p>
+                                    <button type="button" class="btn" data-bs-dismiss="modal" style="background: #0f172a; color: #ffffff; font-weight: 700; font-size: 13px; border-radius: 8px; padding: 10px 22px;">CLOSE WINDOW</button>
+                                </div>
+                            `;
+                            return false;
+                        }
+                        </script>
+                    </div>
+
+                    <!-- Right Column: Assurances & Deep Link -->
+                    <div class="col-lg-5" style="border-left: 1px solid #f1f5f9; padding-left: 24px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 16px; margin-bottom: 16px;">
+                            <h4 style="font-size: 14.5px; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Engineering Assurance</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; color: #475569;">
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 24-Hour Review SLA
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> Mutual NDA on Request
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 100% IP &amp; Code Ownership
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 60-Day Hypercare Warranty
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Full Project Configurator Card Link -->
+                        <div style="background: #fff7ed; border: 1.5px dashed #fdba74; border-radius: 14px; padding: 16px; text-align: center;">
+                            <div style="font-size: 12.5px; font-weight: 700; color: #ea580c; margin-bottom: 4px;">Prefer a Detailed Brief?</div>
+                            <p style="font-size: 11.5px; color: #64748b; margin-bottom: 10px;">Configure features, tech stack, and budget in our full intake configurator.</p>
+                            <a href="start-a-project.html" class="btn btn-sm" style="background: #ea580c; color: #ffffff; font-weight: 800; font-size: 11.5px; border-radius: 6px; padding: 6px 14px; text-decoration: none;">
+                                OPEN PROJECT CONFIGURATOR &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
 <!-- end get a quote modal -->
-
-</div>
+    </div>
+    <!-- End Component: Quote Modal -->
     <!-- ++++ Javascript libraries ++++ -->
     <!--js library of jQuery-->
     <script type="text/javascript" src="js/jquery.min.js"></script>

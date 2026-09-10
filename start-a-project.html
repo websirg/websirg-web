@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Logo &amp; Brand Identity Design | Websirg - Visual Systems</title>
+    <title>Start a Project | Websirg - Custom Software &amp; Digital Engineering</title>
     <!-- SEO & Metadata -->
-    <meta name="description" content="Distinctive corporate logo design, comprehensive brand guidelines, typography systems, and UI design kits crafted by Websirg to command market leadership.">
-    <meta name="keywords" content="Logo Design Delhi, Brand Identity Agency, Corporate Rebranding, UI/UX Design System, Figma Kits, Websirg, Priyanshu Kushwaha">
+    <meta name="description" content="Configure your project with Websirg. Get accurate sprint timelines, milestone pricing, and dedicated engineering pods for mobile apps, enterprise CRMs, and web platforms.">
+    <meta name="keywords" content="Start a Project Websirg, Hire Software Developers, Mobile App Development Quote, Enterprise CRM Pricing, Priyanshu Kushwaha">
     <meta charset="utf-8">
     <meta name="author" content="Websirg">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/websirg-header.css" />
-    <link rel="stylesheet" href="css/websirg-services.css" />
+    <link rel="stylesheet" href="css/websirg-project.css" />
 </head>
 
-<body class="ws-service-page">
+<body class="ws-project-page">
     <!-- Site Header Include -->
     <!-- Component: Header -->
     <div id="site-header">
@@ -162,220 +162,365 @@
     <!-- =========================================================
          1. HERO SECTION (DARK, COMPACT, HIGH-TECH)
     ========================================================== -->
-    <section class="ws-service-hero" id="hero">
-        <div class="ws-serv-glow-1"></div>
-        <div class="ws-serv-glow-2"></div>
-        <div class="ws-serv-grid-bg"></div>
+    <section class="ws-project-hero" id="hero">
+        <div class="ws-proj-glow-1"></div>
+        <div class="ws-proj-glow-2"></div>
+        <div class="ws-proj-grid-bg"></div>
 
         <div class="container">
-            <div class="ws-serv-hero-content">
-                <div class="ws-serv-pill">
-                    <span class="ws-serv-dot"></span>
-                    <span>BRAND IDENTITY &amp; VISUAL SYSTEMS</span>
+            <div class="ws-proj-hero-content">
+                <div class="ws-proj-pill">
+                    <span class="ws-pill-dot"></span>
+                    <span>ENTERPRISE PROJECT CONFIGURATOR</span>
                 </div>
-                <h1 class="ws-serv-title">
-                    Memorable Brand Identities That <span style="background: linear-gradient(135deg, #ffffff 30%, #f97316 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Command Authority</span>
+                <h1 class="ws-proj-title">
+                    Let's Build Something <span class="ws-gradient-text">Extraordinary</span>
                 </h1>
-                <p class="ws-serv-desc">
-                    We craft timeless logo marks, bespoke typography hierarchies, color token palettes, and production-ready design systems that establish instant trust with your customers.
+                <p class="ws-proj-desc">
+                    Tell us about your project parameters below to assemble a dedicated technical team, get transparent sprint milestones, and accelerate your commercial launch.
                 </p>
-
-                <!-- Actions -->
-                <div class="ws-serv-hero-actions">
-                    <a href="start-a-project.html" class="ws-serv-btn-primary">
-                        <span>CRAFT YOUR BRAND</span>
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                    <a href="https://wa.me/919354631515?text=Hello%20Websirg%20Team,%20I%20want%20to%20discuss%20a%20Logo%20and%20Branding%20project." target="_blank" rel="noopener noreferrer" class="ws-serv-btn-wa">
-                        <span class="icon-smartphone-embed"></span>
-                        <span>TALK ON WHATSAPP</span>
-                    </a>
-                    <a href="tel:9354631515" class="ws-serv-btn-phone site-phone-link">
-                        <span class="icon-telephone"></span>
-                        <span class="site-phone">+91 9354631515</span>
-                    </a>
-                </div>
-
-                <!-- Assurances -->
-                <div class="ws-serv-assurances">
-                    <span><span style="color: #f97316;">⚡</span> 100% Vector Scalability (SVG/EPS/AI)</span>
-                    <span>&bull;</span>
-                    <span><span style="color: #10b981;">🛡️</span> Full Commercial Copyright Transfer</span>
-                    <span>&bull;</span>
-                    <span><span style="color: #3b82f6;">🤝</span> Complete Figma UI Kits Included</span>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- =========================================================
-         2. CORE CAPABILITIES BENTO SECTION
+         2. MAIN PROJECT CONFIGURATOR
     ========================================================== -->
-    <section class="ws-serv-section">
+    <section class="ws-project-main-section">
         <div class="container">
-            <div class="ws-serv-header">
-                <div class="ws-serv-pill-small">DESIGN CAPABILITIES</div>
-                <h2 class="ws-serv-section-title">Comprehensive Visual Ecosystems</h2>
-                <p class="ws-serv-section-desc">
-                    Moving beyond generic templates to deliver bespoke graphic assets designed to scale across mobile apps, websites, and physical print.
-                </p>
-            </div>
-
             <div class="row gy-4">
-                <!-- Card 1 -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="ws-serv-card">
-                        <div class="ws-serv-card-icon">
-                            <span class="icon-palette"></span>
+                <!-- Left Column: The Interactive Intake Configurator -->
+                <div class="col-xl-8 col-lg-8 col-md-12">
+                    <div class="ws-configurator-card">
+                        <form id="wsProjectConfiguratorForm" data-custom-handled="true" onsubmit="return handleProjectSubmit(event)">
+                            
+                            <!-- STEP 1: Product Category -->
+                            <div class="ws-step-block">
+                                <div class="ws-step-header">
+                                    <div class="ws-step-badge">1</div>
+                                    <div>
+                                        <h3 class="ws-step-title">What type of product are you building?</h3>
+                                        <p class="ws-step-subtitle">Select the primary architecture your vision requires.</p>
+                                    </div>
+                                </div>
+
+                                <div class="ws-type-cards-grid">
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="Mobile Application">
+                                        <span class="ws-type-icon">📱</span>
+                                        <span class="ws-type-name">Mobile Application</span>
+                                        <span class="ws-type-desc">High-performance iOS &amp; Android native or cross-platform apps.</span>
+                                    </label>
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="Custom Web & CRM">
+                                        <span class="ws-type-icon">💻</span>
+                                        <span class="ws-type-name">Web &amp; Custom CRM</span>
+                                        <span class="ws-type-desc">Scalable portals, enterprise dashboards, and workflow tools.</span>
+                                    </label>
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="Cloud & API Backend">
+                                        <span class="ws-type-icon">⚡</span>
+                                        <span class="ws-type-name">Cloud &amp; Backend API</span>
+                                        <span class="ws-type-desc">Microservices, database optimization, and high-scale backbones.</span>
+                                    </label>
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="UI/UX & Product Design">
+                                        <span class="ws-type-icon">🎨</span>
+                                        <span class="ws-type-name">UI/UX &amp; Design System</span>
+                                        <span class="ws-type-desc">Figma wireframes, design systems, and rapid prototyping.</span>
+                                    </label>
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="SEO & Growth Marketing">
+                                        <span class="ws-type-icon">🔍</span>
+                                        <span class="ws-type-name">SEO &amp; Growth Engine</span>
+                                        <span class="ws-type-desc">Technical search ranking, organic funnels, and performance PPC.</span>
+                                    </label>
+                                    <label class="ws-type-card">
+                                        <input type="radio" name="product_type" value="Full Digital Overhaul">
+                                        <span class="ws-type-icon">🚀</span>
+                                        <span class="ws-type-name">Full Digital Overhaul</span>
+                                        <span class="ws-type-desc">Complete end-to-end consulting, code refactoring, and relaunch.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- STEP 2: Key Features -->
+                            <div class="ws-step-block">
+                                <div class="ws-step-header">
+                                    <div class="ws-step-badge">2</div>
+                                    <div>
+                                        <h3 class="ws-step-title">Which capabilities or features do you need?</h3>
+                                        <p class="ws-step-subtitle">Select all that apply to help us size the engineering sprint.</p>
+                                    </div>
+                                </div>
+
+                                <div class="ws-features-grid">
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="User Auth & Roles">
+                                        <span>🔐 User Authentication &amp; RBAC</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Payment Gateway">
+                                        <span>💳 Payment Gateway Integration</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Analytics & BI Dashboards">
+                                        <span>📊 Analytics &amp; Admin Dashboards</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Real-time Chat & Notifications">
+                                        <span>💬 Real-Time Chat &amp; Push Alerts</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Third-Party APIs">
+                                        <span>🔌 Third-Party API Integrations</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Bank-Grade Security">
+                                        <span>🛡️ Bank-Grade Data Encryption</span>
+                                    </label>
+                                    <label class="ws-feature-pill">
+                                        <input type="checkbox" name="features" value="Multi-tenant Architecture">
+                                        <span>🏢 Multi-Tenant Architecture</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- STEP 3: Budget & Timeline Parameters -->
+                            <div class="ws-step-block">
+                                <div class="ws-step-header">
+                                    <div class="ws-step-badge">3</div>
+                                    <div>
+                                        <h3 class="ws-step-title">Budget &amp; Target Timeline</h3>
+                                        <p class="ws-step-subtitle">Transparent alignment ensures realistic delivery expectations.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="ws-input-label">Estimated Budget Range (INR):</label>
+                                    <div class="ws-pills-row">
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="budget" value="Under 1 Lakh">
+                                            <span>&lt; &#8377;1 Lakh (POC / Consultation)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="budget" value="1 to 3 Lakhs">
+                                            <span>&#8377;1L &ndash; &#8377;3L (Growth Product)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="budget" value="3 to 10 Lakhs">
+                                            <span>&#8377;3L &ndash; &#8377;10L (Enterprise Scale)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="budget" value="10 Lakhs+">
+                                            <span>&#8377;10L+ (Large Architecture)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="budget" value="Undecided">
+                                            <span>Flexible / To Be Estimated</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="ws-input-label">Target Kickoff / Delivery Timeline:</label>
+                                    <div class="ws-pills-row">
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="timeline" value="Immediate (< 2 Weeks)">
+                                            <span>Immediate (&lt; 2 Weeks)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="timeline" value="1 to 2 Months">
+                                            <span>1 &ndash; 2 Months</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="timeline" value="3 to 6 Months">
+                                            <span>3 &ndash; 6 Months</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="timeline" value="Planning / Research">
+                                            <span>Exploratory / Planning</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- STEP 4: Project Scope Description -->
+                            <div class="ws-step-block">
+                                <div class="ws-step-header">
+                                    <div class="ws-step-badge">4</div>
+                                    <div>
+                                        <h3 class="ws-step-title">Project Scope &amp; Vision</h3>
+                                        <p class="ws-step-subtitle">Share any context, user flows, or reference websites.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="ws-input-label">Project Summary &amp; Goals *</label>
+                                    <textarea name="project_description" class="ws-form-control" placeholder="Briefly describe what your app or platform does, key user journeys, reference products, or current technical pain points..." required></textarea>
+                                </div>
+
+                                <div>
+                                    <label class="ws-input-label">Figma, PRD, or Website Links (Optional)</label>
+                                    <input type="url" name="project_link" class="ws-form-control" placeholder="https://figma.com/... or https://docs.google.com/...">
+                                </div>
+                            </div>
+
+                            <!-- STEP 5: Contact & Organization -->
+                            <div class="ws-step-block">
+                                <div class="ws-step-header">
+                                    <div class="ws-step-badge">5</div>
+                                    <div>
+                                        <h3 class="ws-step-title">Your Contact Information</h3>
+                                        <p class="ws-step-subtitle">Where should our solution architect send the initial brief?</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="ws-input-label">Full Name *</label>
+                                        <input type="text" name="full_name" class="ws-form-control" placeholder="e.g. Priyanshu Sharma" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="ws-input-label">Business / Work Email *</label>
+                                        <input type="email" name="email" class="ws-form-control" placeholder="name@company.com" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="ws-input-label">WhatsApp / Phone Number *</label>
+                                        <input type="tel" name="phone" class="ws-control ws-form-control" placeholder="+91 98765 43210" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="ws-input-label">Company / Startup Name</label>
+                                        <input type="text" name="company" class="ws-form-control" placeholder="e.g. Acme Tech Solutions">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="ws-input-label">Preferred Communication Channel:</label>
+                                    <div class="ws-pills-row">
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="pref_comm" value="WhatsApp">
+                                            <span>💬 WhatsApp (Fastest)</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="pref_comm" value="Phone Call">
+                                            <span>📞 Phone Call</span>
+                                        </label>
+                                        <label class="ws-choice-pill">
+                                            <input type="radio" name="pref_comm" value="Email">
+                                            <span>📧 Email</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Confidentiality Guarantee -->
+                            <div class="ws-form-security-note">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                <span><strong>Strict NDA Guarantee:</strong> We keep all intellectual property and concepts 100% confidential. Mutual NDAs are executed before technical discovery.</span>
+                            </div>
+
+                            <!-- Submit Action -->
+                            <div class="ws-proj-submit-wrap">
+                                <button type="submit" class="ws-proj-submit-btn" id="wsProjSubmitBtn">
+                                    <span>SUBMIT PROJECT SPECIFICATION</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </button>
+                            </div>
+
+                            <!-- Instant Success Feedback -->
+                            <div class="ws-form-status" id="wsProjSuccess" style="display: none; margin-top: 20px; padding: 18px; border-radius: 12px; background: #ecfdf5; border: 1.5px solid #a7f3d0; color: #065f46;">
+                                <div style="display: flex; gap: 14px; align-items: flex-start;">
+                                    <span class="icon-check" style="font-size: 24px; color: #10b981; flex-shrink: 0;"></span>
+                                    <div>
+                                        <h4 style="font-size: 17px; font-weight: 800; color: #065f46; margin: 0 0 4px;">Project Specification Received!</h4>
+                                        <p style="margin: 0; font-size: 13.5px; line-height: 1.5; color: #047857;">
+                                            Thank you for trusting Websirg. Our lead solutions architect is reviewing your parameters and will reach out via your preferred channel within 24 hours with an initial architectural roadmap.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sidebar Value Highlights -->
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="ws-proj-sidebar">
+                        
+                        <!-- SLA & Assurance Card -->
+                        <div class="ws-proj-side-card">
+                            <div class="ws-sla-badge">
+                                <span class="ws-pill-dot" style="background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+                                <span>24-Hour Review SLA</span>
+                            </div>
+                            <h4>Why Leaders Build with Websirg</h4>
+                            <ul class="ws-side-checklist">
+                                <li>
+                                    <span class="ws-check-dot">&check;</span>
+                                    <div>
+                                        <strong>100% IP &amp; Code Ownership</strong>
+                                        <div>You own the full source code and proprietary rights upon completion.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="ws-check-dot">&check;</span>
+                                    <div>
+                                        <strong>2-Week Agile Sprints</strong>
+                                        <div>Weekly interactive demo builds so you maintain continuous visibility.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="ws-check-dot">&check;</span>
+                                    <div>
+                                        <strong>60-Day Hypercare Included</strong>
+                                        <div>Complimentary post-launch stabilization, warranty, and bug fixes.</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="ws-check-dot">&check;</span>
+                                    <div>
+                                        <strong>Enterprise Security Standards</strong>
+                                        <div>OWASP-hardened APIs, role-based controls, and data encryption.</div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <h4>Bespoke Logo Mark &amp; Wordmark</h4>
-                        <p>Unique geometric symbols and custom-kerned typography that encapsulate your company's core values, memorable at favicon sizes as well as billboard scales.</p>
-                        <ul>
-                            <li><span class="icon-check"></span> Primary, Secondary &amp; Monogram Lockups</li>
-                            <li><span class="icon-check"></span> Dark &amp; Light Mode Variations</li>
-                            <li><span class="icon-check"></span> Full Vector Assets (SVG, EPS, PNG, PDF)</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="ws-serv-card">
-                        <div class="ws-serv-card-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; border-color: rgba(59, 130, 246, 0.25);">
-                            <span class="icon-book"></span>
-                        </div>
-                        <h4>Comprehensive Brand Guidelines</h4>
-                        <p>An exhaustive 30+ page brand manual detailing precise minimum clear space rules, prohibited misuses, accessible color contrast ratios, and editorial tone of voice.</p>
-                        <ul>
-                            <li><span class="icon-check"></span> HEX, RGB &amp; CMYK Color Formulations</li>
-                            <li><span class="icon-check"></span> Primary &amp; Accent Typography Hierarchy</li>
-                            <li><span class="icon-check"></span> Photographic &amp; Iconography Rules</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="ws-serv-card">
-                        <div class="ws-serv-card-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border-color: rgba(16, 185, 129, 0.25);">
-                            <span class="icon-laptop-phone"></span>
-                        </div>
-                        <h4>Design Systems &amp; UI Kits</h4>
-                        <p>Production-ready Figma component libraries including buttons, input fields, modals, and navigation bars synchronized with your code tokens for rapid development.</p>
-                        <ul>
-                            <li><span class="icon-check"></span> Auto-Layout Figma Components</li>
-                            <li><span class="icon-check"></span> Responsive Mobile &amp; Desktop Breakpoints</li>
-                            <li><span class="icon-check"></span> Developer Handoff Token Documentation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech Frameworks Strip -->
-            <div class="text-center mt-5">
-                <div style="font-size: 13px; font-weight: 800; color: #64748b; letter-spacing: 0.6px; text-transform: uppercase;">CREATIVE SOFTWARE WE USE</div>
-                <div class="ws-tech-chips-wrap">
-                    <span class="ws-tech-chip">Figma Professional</span>
-                    <span class="ws-tech-chip">Adobe Illustrator</span>
-                    <span class="ws-tech-chip">Adobe Photoshop</span>
-                    <span class="ws-tech-chip">Adobe InDesign</span>
-                    <span class="ws-tech-chip">Tokens Studio</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         3. SPRINT LIFECYCLE
-    ========================================================== -->
-    <section class="ws-process-section">
-        <div class="container">
-            <div class="ws-serv-header">
-                <div class="ws-serv-pill-small">DESIGN LIFECYCLE</div>
-                <h2 class="ws-serv-section-title">The Creative Identity Process</h2>
-            </div>
-
-            <div class="ws-process-grid">
-                <div class="ws-step-card">
-                    <div class="ws-step-number">01</div>
-                    <h5>Brand Archetype Discovery</h5>
-                    <p>Moodboards, positioning audits, competitor landscape analysis, and visual direction.</p>
-                </div>
-                <div class="ws-step-card">
-                    <div class="ws-step-number">02</div>
-                    <h5>Exploration &amp; Concepts</h5>
-                    <p>Presenting 3 distinct, fully fleshed-out logo directions in real-world application mockups.</p>
-                </div>
-                <div class="ws-step-card">
-                    <div class="ws-step-number">03</div>
-                    <h5>Refinement &amp; Systems</h5>
-                    <p>Polishing the chosen direction, defining font pairing rules, and formulating color palettes.</p>
-                </div>
-                <div class="ws-step-card">
-                    <div class="ws-step-number">04</div>
-                    <h5>Master Asset Handover</h5>
-                    <p>Exporting full vector packages, guidelines PDF, and transferring 100% commercial IP rights.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         4. FREQUENTLY ASKED QUESTIONS
-    ========================================================== -->
-    <section class="ws-serv-faq-section">
-        <div class="container">
-            <div class="ws-serv-header">
-                <div class="ws-serv-pill-small">FREQUENTLY ASKED QUESTIONS</div>
-                <h2 class="ws-serv-section-title">Common Questions About Brand Identity</h2>
-            </div>
-
-            <div class="row gy-3">
-                <div class="col-md-6">
-                    <div class="ws-serv-faq-card">
-                        <h5>How many initial logo concepts do we receive?</h5>
-                        <p>We present three (3) distinct, thoughtfully developed creative directions, each demonstrated on product packaging, web screens, and corporate stationery.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="ws-serv-faq-card">
-                        <h5>Do I receive full copyright and trademark ownership?</h5>
-                        <p>Yes, 100%. All final vector logo files and design systems transfer entirely to your organization with full commercial usage and trademark registration rights.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="ws-serv-faq-card">
-                        <h5>What file formats are included in the final delivery?</h5>
-                        <p>You receive all vector master files (.AI, .EPS, .SVG, .PDF), transparent web files (.PNG, .WebP), favicons, and social media avatar/banner templates.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="ws-serv-faq-card">
-                        <h5>Can you also design our mobile app and website UI?</h5>
-                        <p>Yes! Because Websirg is a full-cycle digital agency, our UI/UX designers and software engineers can seamlessly take your new branding directly into code.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================
-         5. BOTTOM CALL TO ACTION
-    ========================================================== -->
-    <section class="ws-serv-cta-section">
-        <div class="container">
-            <div class="ws-serv-cta-card">
-                <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <span style="color: #f97316; font-size: 11px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;">COMMAND MARKET ATTENTION</span>
-                        <h3>Ready to Build an Iconic Brand Identity?</h3>
-                        <p>Schedule a creative consultation to transform how the market perceives your company.</p>
-                    </div>
-                    <div class="col-lg-4 mt-3 mt-lg-0 text-lg-end">
-                        <a href="start-a-project.html" class="ws-serv-btn-primary">
-                            <span>CRAFT YOUR BRAND</span>
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        <!-- Direct WhatsApp Hotline Card -->
+                        <a href="https://wa.me/919354631515?text=Hello%20Websirg%20Team,%20I%20would%20like%20to%20discuss%20a%20project%20immediately." target="_blank" rel="noopener noreferrer" class="ws-side-wa-box">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span class="icon-smartphone-embed" style="font-size: 26px;"></span>
+                                <div>
+                                    <h5 style="margin: 0; font-size: 15px; font-weight: 800; color: #fff;">Need an Immediate Reply?</h5>
+                                    <p style="margin: 0; font-size: 12px; opacity: 0.9;">Talk with our tech leads on WhatsApp</p>
+                                </div>
+                            </div>
+                            <div class="ws-side-wa-btn">
+                                CHAT ON WHATSAPP &rarr;
+                            </div>
                         </a>
+
+                        <!-- Direct Engineering Contacts -->
+                        <div class="ws-proj-side-card">
+                            <h4>Direct Channels</h4>
+                            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+                                <div style="display: flex; gap: 10px; align-items: center;">
+                                    <span class="icon-telephone" style="color: #f97316; font-size: 16px;"></span>
+                                    <a href="tel:9354631515" class="site-phone-link site-phone" style="font-weight: 700; color: #0f172a; text-decoration: none;">+91 9354631515</a>
+                                </div>
+                                <div style="display: flex; gap: 10px; align-items: center;">
+                                    <span class="icon-envelope" style="color: #f97316; font-size: 16px;"></span>
+                                    <a href="mailto:info@websirg.com" class="site-email-link site-email" style="font-weight: 700; color: #0f172a; text-decoration: none;">info@websirg.com</a>
+                                </div>
+                                <div style="display: flex; gap: 10px; align-items: center;">
+                                    <span class="icon-map-marker" style="color: #f97316; font-size: 16px;"></span>
+                                    <span style="font-weight: 600; color: #64748b; font-size: 13px;">Delhi NCR, India</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -792,6 +937,66 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/site-config.js"></script>
+
+    <!-- Interactive Configurator Script -->
+    <script>
+        // Product Type Radio Card Selection
+        document.querySelectorAll('.ws-type-card').forEach(function(card) {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.ws-type-card').forEach(function(c) {
+                    c.classList.remove('is-selected');
+                });
+                this.classList.add('is-selected');
+                const radio = this.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+            });
+        });
+
+        // Feature Pill Toggle
+        document.querySelectorAll('.ws-feature-pill input[type="checkbox"]').forEach(function(cb) {
+            cb.addEventListener('change', function() {
+                if (this.checked) {
+                    this.closest('.ws-feature-pill').classList.add('is-active');
+                } else {
+                    this.closest('.ws-feature-pill').classList.remove('is-active');
+                }
+            });
+        });
+
+        // Choice Pill Radio Selection (Budget, Timeline, Preferred Channel)
+        document.querySelectorAll('.ws-choice-pill input[type="radio"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                const name = this.getAttribute('name');
+                document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
+                    r.closest('.ws-choice-pill').classList.remove('is-active');
+                });
+                this.closest('.ws-choice-pill').classList.add('is-active');
+            });
+        });
+
+        // Form Submission
+        async function handleProjectSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = document.getElementById('wsProjSubmitBtn');
+            const successBox = document.getElementById('wsProjSuccess');
+
+            btn.disabled = true;
+            btn.innerHTML = '<span>TRANSMITTING BRIEF TO WEBSIRG...</span>';
+
+            if (window.submitWebsirgForm) {
+                await window.submitWebsirgForm(form, {
+                    formType: 'Start a Project Specification',
+                    subject: '🚀 New Project Brief from Websirg Configurator'
+                });
+            }
+
+            btn.style.display = 'none';
+            successBox.style.display = 'block';
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return false;
+        }
+    </script>
 </body>
 
 </html>

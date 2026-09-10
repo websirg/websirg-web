@@ -1,0 +1,363 @@
+/**
+ * Websirg - FAQ Knowledge Base Stylesheet
+ * High-Tech Dark Hero, Interactive Accordions, Category Pills, Quick Support Banner
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --ws-primary: #f97316;
+  --ws-primary-hover: #ea580c;
+  --ws-dark: #070b14;
+  --ws-dark-surface: #0f172a;
+  --ws-dark-border: rgba(255, 255, 255, 0.08);
+  --ws-light-bg: #f8fafc;
+  --ws-card-border: #e2e8f0;
+  --ws-text-main: #0f172a;
+  --ws-text-muted: #64748b;
+  --ws-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.ws-faq-page {
+  font-family: var(--ws-font) !important;
+  color: var(--ws-text-main);
+  background: var(--ws-light-bg);
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   1. HERO SECTION (DARK, COMPACT, HIGH-TECH)
+========================================================== */
+.ws-faq-hero {
+  position: relative;
+  background: var(--ws-dark);
+  color: #ffffff;
+  padding: 130px 0 50px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ws-dark-border);
+}
+
+.ws-faq-glow-1 {
+  position: absolute;
+  top: -120px;
+  right: 12%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ws-faq-glow-2 {
+  position: absolute;
+  bottom: -100px;
+  left: 8%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ws-faq-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+.ws-faq-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ws-faq-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: #fdba74;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ws-faq-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ws-primary);
+  box-shadow: 0 0 10px var(--ws-primary);
+  display: inline-block;
+  animation: wsDotPopUp 1.8s infinite ease-in-out;
+  will-change: transform, box-shadow, opacity;
+}
+
+@keyframes wsDotPopUp {
+  0% { transform: scale(0.75); opacity: 0.55; box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+  50% { transform: scale(1.35); opacity: 1; box-shadow: 0 0 10px 3px rgba(249, 115, 22, 0.5); }
+  100% { transform: scale(0.75); opacity: 0.55; box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+}
+
+.ws-faq-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.ws-faq-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 22px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================================
+   2. MAIN FAQ SECTION & CATEGORIES
+========================================================== */
+.ws-faq-main-section {
+  padding: 50px 0 70px;
+  background: var(--ws-light-bg);
+}
+
+.ws-faq-category-block {
+  margin-bottom: 40px;
+  scroll-margin-top: 100px;
+}
+
+.ws-faq-category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.ws-faq-cat-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: var(--ws-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  flex-shrink: 0;
+}
+
+.ws-faq-cat-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ws-text-main);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Accordion Item Styling */
+.ws-accordion-item {
+  background: #ffffff;
+  border: 1px solid var(--ws-card-border);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.ws-accordion-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.ws-accordion-header {
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  user-select: none;
+}
+
+.ws-accordion-question {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--ws-text-main);
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.ws-accordion-item.is-active .ws-accordion-question {
+  color: var(--ws-primary);
+}
+
+.ws-accordion-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.ws-accordion-item.is-active .ws-accordion-arrow {
+  transform: rotate(180deg);
+  background: #fff7ed;
+  color: var(--ws-primary);
+}
+
+.ws-accordion-body {
+  display: none;
+  padding: 0 22px 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+  border-top: 1px solid #f8fafc;
+}
+
+.ws-accordion-body p {
+  margin: 0;
+}
+
+.ws-accordion-body ul {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+.ws-accordion-body li {
+  margin-bottom: 6px;
+}
+
+/* Quick Jump Category Sidebar */
+.ws-faq-sidebar {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  border: 1px solid var(--ws-card-border);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.ws-faq-sidebar-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #64748b;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ws-faq-cat-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ws-faq-cat-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.ws-faq-cat-nav a:hover {
+  background: #fff7ed;
+  color: #ea580c;
+  transform: translateX(4px);
+}
+
+/* Help Box in Sidebar */
+.ws-faq-help-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff7ed;
+  border: 1.5px dashed #fdba74;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ws-faq-help-box h5 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ea580c;
+  margin-bottom: 4px;
+}
+
+.ws-faq-help-box p {
+  font-size: 11.5px;
+  color: #64748b;
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
+.ws-faq-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 14px;
+  background: #10b981;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  transition: all 0.2s ease;
+}
+
+.ws-faq-wa-btn:hover {
+  background: #059669;
+}
+
+@media (max-width: 991px) {
+  .ws-faq-hero {
+    padding: 110px 0 40px;
+  }
+  .ws-faq-title {
+    font-size: 32px;
+  }
+  .ws-faq-sidebar {
+    position: static;
+    margin-bottom: 25px;
+  }
+}
