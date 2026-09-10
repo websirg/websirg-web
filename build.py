@@ -46,10 +46,15 @@ def process_includes(content, config):
 
     return apply_template_vars(content, config)
 
+from sync_components import sync_all
+
 def build():
     config = load_config()
     site_name = config.get("siteName", "Websirg")
-    print(f"Baking production build for: {site_name}...")
+    print(f"Syncing components and baking production build for: {site_name}...")
+
+    # First sync components across all workspace HTML files
+    sync_all()
 
     os.makedirs(DIST_DIR, exist_ok=True)
 

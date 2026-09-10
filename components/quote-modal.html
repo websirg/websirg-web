@@ -1,61 +1,120 @@
-<!-- get a quote modal -->
-<div class="modal fade verticl-center-modal" id="getAQuoteModal" tabindex="-1" role="dialog" aria-labelledby="getAQuoteModal">
-    <div class="modal-dialog getguoteModal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span class="icon-cross-circle"></span></button>
+<!-- Websirg Modern Architecture Quote Modal -->
+<div class="modal fade verticl-center-modal" id="getAQuoteModal" tabindex="-1" role="dialog" aria-labelledby="getAQuoteModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="border-radius: 24px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25); font-family: 'Plus Jakarta Sans', sans-serif;">
+            
+            <!-- Modal Header -->
+            <div class="modal-header" style="background: #070b14; padding: 22px 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span class="ws-modal-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #f97316; box-shadow: 0 0 10px #f97316; display: inline-block;"></span>
+                    <h4 style="color: #ffffff; font-size: 17px; font-weight: 800; margin: 0; letter-spacing: -0.01em;">Websirg Architecture Consultation</h4>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1); opacity: 0.8;"></button>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="customise-form">
-                            <form class="email_form" method="post">
-                                <h3>Get a Free Quote</h3>
-                                <div class="form-group customised-formgroup"> <span class="icon-user"></span>
-                                    <input type="text" name="full_name" class="form-control" placeholder="Name" required />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-envelope"></span>
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-telephone"></span>
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone" />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-laptop"></span>
-                                    <input type="text" name="website" class="form-control" placeholder="Website" />
-                                </div>
-                                <div class="form-group customised-formgroup"> <span class="icon-bubble"></span>
-                                    <textarea name="message" class="form-control" placeholder="Message"></textarea>
-                                </div>
-                                <div>
-                                    <button type="submit" class="btn btn-fill full-width">GET A QUOTE<span class="icon-chevron-right"></span></button>
-                                </div>
-                            </form>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="padding: 32px 30px; background: #ffffff;">
+                <div class="row gy-4">
+                    <!-- Left Column: Quick Form -->
+                    <div class="col-lg-7">
+                        <div style="margin-bottom: 18px;">
+                            <span style="color: #f97316; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px;">QUICK PROJECT INQUIRY</span>
+                            <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin: 4px 0 6px;">Request a Technical Quote</h3>
+                            <p style="font-size: 13px; color: #64748b; margin: 0;">Our senior tech leads will evaluate your specs and get back to you within 24 hours.</p>
                         </div>
+
+                        <form class="email_form" id="wsQuoteModalForm" method="post" onsubmit="return handleQuoteModalSubmit(event)">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <input type="text" name="full_name" class="form-control" placeholder="Full Name *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <input type="email" name="email" class="form-control" placeholder="Work Email *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <input type="tel" name="phone" class="form-control" placeholder="WhatsApp / Phone *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <select name="service" class="form-control" style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" required>
+                                        <option value="" disabled selected>Select a Service / Solution *</option>
+                                        <option value="Mobile App Development">Mobile App (iOS / Android)</option>
+                                        <option value="Web & Custom CRM">Web &amp; Custom CRM Platform</option>
+                                        <option value="Cloud & API Infrastructure">Cloud &amp; Backend API</option>
+                                        <option value="SEO & Growth Marketing">SEO &amp; Growth Engine</option>
+                                        <option value="UI/UX Product Design">UI/UX &amp; Product Design</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <textarea name="message" class="form-control" placeholder="Briefly describe your requirements or vision..." required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px; min-height: 90px;"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; gap: 10px; align-items: center;">
+                                <button type="submit" class="btn" style="flex-grow: 1; background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); color: #fff; font-weight: 800; font-size: 13.5px; padding: 12px 20px; border-radius: 8px; border: none; letter-spacing: 0.4px;">
+                                    REQUEST ARCHITECTURE QUOTE &rarr;
+                                </button>
+                            </div>
+                        </form>
+                        <script>
+                        async function handleQuoteModalSubmit(event) {
+                            event.preventDefault();
+                            const form = event.target;
+                            const btn = form.querySelector('button[type="submit"]');
+                            btn.disabled = true;
+                            btn.innerHTML = '<span>TRANSMITTING TO WEBSIRG...</span>';
+
+                            if (window.submitWebsirgForm) {
+                                await window.submitWebsirgForm(form, {
+                                    formType: 'Quote Consultation Modal',
+                                    subject: '⚡ Quick Architecture Quote Request'
+                                });
+                            }
+
+                            form.innerHTML = `
+                                <div style="text-align: center; padding: 25px 10px;">
+                                    <div style="width: 52px; height: 52px; border-radius: 50%; background: #ecfdf5; color: #10b981; font-size: 26px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; border: 2px solid #a7f3d0;">✓</div>
+                                    <h3 style="font-size: 20px; font-weight: 800; color: #065f46; margin-bottom: 6px;">Quote Request Transmitted!</h3>
+                                    <p style="font-size: 13.5px; color: #047857; margin-bottom: 18px; line-height: 1.55;">Your project parameters have been transmitted directly to <strong>websirg@gmail.com</strong>. Our senior technical architect will evaluate your requirements and contact you within 24 hours.</p>
+                                    <button type="button" class="btn" data-bs-dismiss="modal" style="background: #0f172a; color: #ffffff; font-weight: 700; font-size: 13px; border-radius: 8px; padding: 10px 22px;">CLOSE WINDOW</button>
+                                </div>
+                            `;
+                            return false;
+                        }
+                        </script>
                     </div>
-                    <div class="col-lg-6">
-                        <h3>What’s Next?</h3>
-                        <ul class="list-with-arrow">
-                            <li>An email and phone call from one of our representatives.</li>
-                            <li>A time &amp; cost estimation tailored to your needs.</li>
-                            <li>An in-person or video consultation.</li>
-                        </ul>
-                        <div class="contact-info-box-wrapper">
-                            <div class="contact-info-box"> <span class="icon-telephone"></span>
-                                <div>
-                                    <h6>Give us a call</h6>
-                                    <p><a href="tel:{{phone}}" class="site-phone-link site-phone">{{phoneFormatted}}</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-info-box"> <span class="icon-envelope"></span>
-                                <div>
-                                    <h6>Send an email</h6>
-                                    <p><a href="mailto:{{email}}" class="site-email-link site-email">{{email}}</a></p>
-                                </div>
-                            </div>
+
+                    <!-- Right Column: Assurances & Deep Link -->
+                    <div class="col-lg-5" style="border-left: 1px solid #f1f5f9; padding-left: 24px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 16px; margin-bottom: 16px;">
+                            <h4 style="font-size: 14.5px; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Engineering Assurance</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; color: #475569;">
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 24-Hour Review SLA
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> Mutual NDA on Request
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 100% IP &amp; Code Ownership
+                                </li>
+                                <li style="display: flex; gap: 8px; align-items: center;">
+                                    <span style="color: #10b981; font-weight: 800;">✓</span> 60-Day Hypercare Warranty
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Full Project Configurator Card Link -->
+                        <div style="background: #fff7ed; border: 1.5px dashed #fdba74; border-radius: 14px; padding: 16px; text-align: center;">
+                            <div style="font-size: 12.5px; font-weight: 700; color: #ea580c; margin-bottom: 4px;">Prefer a Detailed Brief?</div>
+                            <p style="font-size: 11.5px; color: #64748b; margin-bottom: 10px;">Configure features, tech stack, and budget in our full intake configurator.</p>
+                            <a href="start-a-project.html" class="btn btn-sm" style="background: #ea580c; color: #ffffff; font-weight: 800; font-size: 11.5px; border-radius: 6px; padding: 6px 14px; text-decoration: none;">
+                                OPEN PROJECT CONFIGURATOR &rarr;
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>

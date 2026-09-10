@@ -79,7 +79,34 @@ def process_includes(content, config):
 
     return apply_template_vars(content, config)
 
+last_components_mtime = 0
+
+def check_and_sync_components():
+    global last_components_mtime
+    comp_dir = os.path.join(DIRECTORY, 'components')
+    if not os.path.isdir(comp_dir):
+        return
+    current_mtime = 0
+    for f in os.listdir(comp_dir):
+        fp = os.path.join(comp_dir, f)
+        if os.path.isfile(fp):
+            try:
+                mt = os.path.getmtime(fp)
+                if mt > current_mtime:
+                    current_mtime = mt
+            except OSError:
+                pass
+    if last_components_mtime != 0 and current_mtime > last_components_mtime:
+        try:
+            from sync_components import sync_all
+            print("[AutoSync] Changes detected in components/. Synchronizing all pages...")
+            sync_all()
+        except Exception as err:
+            print(f"[AutoSync Error] {err}")
+    last_components_mtime = current_mtime
+
 def get_latest_mtime():
+    check_and_sync_components()
     max_mtime = 0
     for root, dirs, files in os.walk(DIRECTORY):
         dirs[:] = [d for d in dirs if not d.startswith('.')]

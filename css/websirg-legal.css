@@ -1,0 +1,273 @@
+/**
+ * Websirg - Legal & Policy Pages Stylesheet (Terms & Privacy)
+ * Clean Typography, Table of Contents, Sticky Sidebar, Compact Spacing
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --ws-primary: #f97316;
+  --ws-primary-hover: #ea580c;
+  --ws-dark: #070b14;
+  --ws-dark-border: rgba(255, 255, 255, 0.08);
+  --ws-light-bg: #f8fafc;
+  --ws-card-border: #e2e8f0;
+  --ws-text-main: #0f172a;
+  --ws-text-muted: #64748b;
+  --ws-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.ws-legal-page {
+  font-family: var(--ws-font) !important;
+  color: var(--ws-text-main);
+  background: var(--ws-light-bg);
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   1. HERO SECTION (DARK, COMPACT, HIGH-TECH)
+========================================================== */
+.ws-legal-hero {
+  position: relative;
+  background: var(--ws-dark);
+  color: #ffffff;
+  padding: 130px 0 45px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ws-dark-border);
+}
+
+.ws-legal-glow {
+  position: absolute;
+  top: -120px;
+  right: 15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.16) 0%, rgba(249, 115, 22, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.ws-legal-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+.ws-legal-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ws-legal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: #fdba74;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ws-legal-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.ws-legal-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin-top: 14px;
+}
+
+.ws-legal-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =========================================================
+   2. MAIN LEGAL CONTENT & SIDEBAR
+========================================================== */
+.ws-legal-main-section {
+  padding: 50px 0 70px;
+  background: var(--ws-light-bg);
+}
+
+/* Sticky Navigation Sidebar */
+.ws-legal-sidebar {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  border: 1px solid var(--ws-card-border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.ws-sidebar-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #64748b;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ws-legal-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ws-legal-nav a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ws-legal-nav a:hover,
+.ws-legal-nav a.active {
+  background: #fff7ed;
+  color: #ea580c;
+  transform: translateX(4px);
+}
+
+/* Content Bento Cards */
+.ws-legal-card {
+  background: #ffffff;
+  border: 1px solid var(--ws-card-border);
+  border-radius: 18px;
+  padding: 34px 36px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.04);
+  margin-bottom: 24px;
+}
+
+.ws-legal-section {
+  margin-bottom: 30px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ws-legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ws-sec-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #ea580c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.ws-legal-section h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ws-text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.ws-legal-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.ws-legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ws-legal-section ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.ws-legal-bullet {
+  color: var(--ws-primary);
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Callout Box inside terms */
+.ws-legal-callout {
+  background: #f8fafc;
+  border-left: 4px solid var(--ws-primary);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.ws-legal-callout strong {
+  color: #0f172a;
+}
+
+@media (max-width: 991px) {
+  .ws-legal-hero {
+    padding: 110px 0 40px;
+  }
+  .ws-legal-title {
+    font-size: 30px;
+  }
+  .ws-legal-card {
+    padding: 24px 20px;
+  }
+  .ws-legal-sidebar {
+    position: static;
+    margin-bottom: 24px;
+  }
+}

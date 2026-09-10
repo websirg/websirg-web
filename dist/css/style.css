@@ -5111,4 +5111,129 @@ footer .light-ash-bg:after {
     content: "";
     clear: both;
     display: block;
-} 
+}
+
+/* =============================================================
+   DOWN-COUNT / DIGITAL TICKER COUNTER ANIMATION
+   Smooth numeric count with subtle downward glide (No rotation)
+============================================================= */
+.ws-stat-number,
+.ws-counter-num,
+.counter {
+  display: inline-block;
+  will-change: transform, opacity;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Down count entry: subtle vertical slide down with crisp fade, NO rotation */
+.ws-stat-number.ws-downcount-active,
+.ws-counter-num.ws-downcount-active,
+.counter.ws-downcount-active {
+  animation: wsDownCountTick 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes wsDownCountTick {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Stat card hover: clean elevation and glow without rotation */
+.ws-stat-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ws-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.ws-stat-card:hover .ws-stat-icon-wrapper {
+  transform: translateY(-2px) scale(1.06);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ws-stat-card:hover .ws-stat-number,
+.ws-counter-item:hover .ws-counter-num {
+  transform: translateY(-1px);
+  color: #f97316;
+  transition: all 0.25s ease;
+}
+
+/* =============================================================
+   DOT ANIMATIONS: POP-UP & FADE-UP GLOW (ORANGE & GREEN DOTS)
+   Vibrant pulsing pop-up / fade-up micro-interactions
+============================================================= */
+@keyframes wsDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(249, 115, 22, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+@keyframes wsGreenDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(16, 185, 129, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* All Orange Dots Across Site (Header, Hero, Pills, CTA, Modal) */
+.ws-topbar-dot,
+.ws-pulse-dot,
+.ws-dot,
+.ws-cta-dot,
+.to-cta-dot,
+.ws-modal-dot,
+.ws-blog-dot,
+.ws-pill-dot,
+.ws-faq-dot,
+.ws-project-dot,
+.ws-tech-dot.orange {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* All Green Dots Across Site (WhatsApp, Live Agent, Statuses) */
+.ws-float-dot,
+.ws-tech-dot.green,
+.ws-status-dot.green,
+.ws-dot-green,
+.ws-live-dot {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsGreenDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+
+ 
