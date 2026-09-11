@@ -84,7 +84,7 @@
             </div>
 
             <!-- Mobile Drawer Toggler -->
-            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler collapsed d-lg-none" id="wsMobileNavToggler" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -719,7 +719,7 @@
                             <p style="font-size: 13px; color: #64748b; margin: 0;">Our senior tech leads will evaluate your specs and get back to you within 24 hours.</p>
                         </div>
 
-                        <form class="email_form" id="wsQuoteModalForm" method="post" onsubmit="return handleQuoteModalSubmit(event)">
+                        <form id="wsQuoteModalForm" data-custom-handled="true" onsubmit="return handleQuoteModalSubmit(event)">
                             <div class="row">
                                 <div class="col-md-6 mb-2">
                                     <input type="text" name="full_name" class="form-control" placeholder="Full Name *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />

@@ -4909,7 +4909,7 @@ p {
 }
 
 .main-menu .navbar-brand {
-width:210px;
+    width: auto;
 }
 
 .navbar-toggler {
@@ -4936,7 +4936,7 @@ width:210px;
     width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: #000;
+    background-color: #ea580c;
     line-height: 1;
 }
 
@@ -4949,7 +4949,7 @@ width:210px;
     padding-left: 0;
 }
 .navbar-expand-md .navbar-nav .nav-link.active {
-    color: #53b778;
+    color: #ea580c;
 }
 
 
@@ -4958,15 +4958,14 @@ width:210px;
         margin-top: 8px;
     }
     .navbar-header {
-        width: 100%;
+        width: auto;
         display: flex;
         align-items: center;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        flex-direction: row;
     }
     .navbar-expand-md .navbar-nav .nav-link.active {
         color: #fff !important;
-        background-color: #53b778;
+        background-color: #ea580c;
     }
 
     .container>.navbar-collapse {

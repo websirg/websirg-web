@@ -117,6 +117,8 @@
 
         applyConfig();
         highlightActiveNav();
+        setupMobileNav();
+        setupDropdownInteractions();
     }
 
     // Sticky Header Scroll Handler
@@ -215,37 +217,43 @@
         });
     }
 
-    // Native Rock-Solid Mobile Drawer Toggle
+    // Native Rock-Solid Mobile Drawer Toggle (Delegated & Resilient)
+    let mobileNavInitialized = false;
     function setupMobileNav() {
-        const toggler = document.querySelector('.navbar-toggler');
-        const collapse = document.querySelector('#navbar-collapse-1');
-        if (!toggler || !collapse) return;
+        if (mobileNavInitialized) return;
+        mobileNavInitialized = true;
 
-        toggler.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const isOpen = collapse.classList.contains('show');
-            if (isOpen) {
-                collapse.classList.remove('show');
-                toggler.classList.add('collapsed');
-                toggler.setAttribute('aria-expanded', 'false');
-            } else {
-                collapse.classList.add('show');
-                toggler.classList.remove('collapsed');
-                toggler.setAttribute('aria-expanded', 'true');
-            }
-        });
-
-        // Close drawer when clicking a non-dropdown nav link
-        const navLinks = collapse.querySelectorAll('.navbar-nav > li:not(.dropdown) > a, .ws-nav-cta, .dropdown-menu > li > a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 992) {
+        document.addEventListener('click', (e) => {
+            const toggler = e.target.closest('.navbar-toggler, #wsMobileNavToggler');
+            if (toggler) {
+                e.preventDefault();
+                e.stopPropagation();
+                const collapse = document.querySelector('#navbar-collapse-1');
+                if (!collapse) return;
+                const isOpen = collapse.classList.contains('show');
+                if (isOpen) {
                     collapse.classList.remove('show');
                     toggler.classList.add('collapsed');
                     toggler.setAttribute('aria-expanded', 'false');
+                } else {
+                    collapse.classList.add('show');
+                    toggler.classList.remove('collapsed');
+                    toggler.setAttribute('aria-expanded', 'true');
                 }
-            });
+                return;
+            }
+
+            // Close mobile drawer when clicking a non-dropdown nav link
+            const navLink = e.target.closest('#navbar-collapse-1 .navbar-nav > li:not(.dropdown) > a, #navbar-collapse-1 .ws-nav-cta, #navbar-collapse-1 .dropdown-menu > li > a');
+            if (navLink && window.innerWidth < 992) {
+                const collapse = document.querySelector('#navbar-collapse-1');
+                const togglers = document.querySelectorAll('.navbar-toggler, #wsMobileNavToggler');
+                if (collapse) collapse.classList.remove('show');
+                togglers.forEach(t => {
+                    t.classList.add('collapsed');
+                    t.setAttribute('aria-expanded', 'false');
+                });
+            }
         });
     }
 
@@ -507,7 +515,15 @@
             if (statusMsg) {
                 statusMsg.style.display = 'block';
             } else {
-                alert('Thank you! Your information has been shared with the Websirg team (websirg@gmail.com). We will contact you within 24 hours.');
+                let successCard = form.querySelector('.ws-universal-success');
+                if (!successCard) {
+                    successCard = document.createElement('div');
+                    successCard.className = 'ws-universal-success';
+                    successCard.style.cssText = 'background: #ecfdf5; border: 1.5px solid #a7f3d0; border-radius: 10px; padding: 14px 16px; margin-top: 14px; text-align: center; color: #065f46; font-size: 13.5px; line-height: 1.55;';
+                    successCard.innerHTML = '<strong>✓ Request Transmitted Successfully!</strong><br>Your details have been transmitted directly to <strong>websirg@gmail.com</strong>. Our engineering leads will reach out within 24 hours.';
+                    form.appendChild(successCard);
+                }
+                successCard.style.display = 'block';
             }
             form.reset();
         });
