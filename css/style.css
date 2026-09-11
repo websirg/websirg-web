@@ -5205,6 +5205,78 @@ footer .light-ash-bg:after {
   }
 }
 
+@keyframes wsBlueDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(37, 99, 235, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+@keyframes wsCyanDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(6, 182, 212, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+  }
+}
+
+@keyframes wsYellowDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(245, 158, 11, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+@keyframes wsPurpleDotPopUp {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(139, 92, 246, 0.5);
+  }
+  100% {
+    transform: scale(0.75);
+    opacity: 0.55;
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
 /* All Orange Dots Across Site (Header, Hero, Pills, CTA, Modal) */
 .ws-topbar-dot,
 .ws-pulse-dot,
@@ -5232,6 +5304,46 @@ footer .light-ash-bg:after {
   display: inline-block !important;
   border-radius: 50% !important;
   animation: wsGreenDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Blue Dots (Tech Pills, React Native, Next.js) */
+.ws-tech-dot.blue {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsBlueDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Cyan Dots (Flutter) */
+.ws-tech-dot.cyan {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsCyanDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Yellow Dots (Node.js) */
+.ws-tech-dot.yellow {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsYellowDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Purple Dots (PostgreSQL) */
+.ws-tech-dot.purple {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsPurpleDotPopUp 1.8s infinite ease-in-out !important;
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Fallback for any other tech dot */
+.ws-tech-dot {
+  display: inline-block !important;
+  border-radius: 50% !important;
+  animation: wsDotPopUp 1.8s infinite ease-in-out;
   will-change: transform, box-shadow, opacity;
 }
 
