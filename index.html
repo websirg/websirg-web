@@ -13,6 +13,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="icon/apple-touch-icon.png">
     
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +86,7 @@
             </div>
 
             <!-- Mobile Drawer Toggler -->
-            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler collapsed d-lg-none" id="wsMobileNavToggler" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -423,33 +425,74 @@
                 </div>
 
                 <!-- Right: Clean Quote Form Card -->
-                <div class="col-lg-5 mt-4 mt-lg-0">
-                    <div class="ws-quote-card">
-                        <h3>Get a Free Architecture Quote</h3>
-                        <p>Speak directly with our engineering architects today.</p>
-                        <form class="email_form" method="post">
-                            <div class="ws-form-group">
-                                <input type="text" name="full_name" class="ws-input" placeholder="Your Full Name *" required>
-                            </div>
-                            <div class="ws-form-group">
-                                <input type="email" name="email" class="ws-input" placeholder="Work Email Address *" required>
-                            </div>
-                            <div class="ws-form-group">
-                                <input type="tel" name="phone" class="ws-input" placeholder="Phone / WhatsApp Number *" required>
-                            </div>
-                            <div class="ws-form-group">
-                                <input type="text" name="website" class="ws-input" placeholder="Current Website (Optional)">
-                            </div>
-                            <div class="ws-form-group">
-                                <textarea name="message" class="ws-input" placeholder="Tell us about your project or operational requirements..."></textarea>
-                            </div>
-                            <button type="submit" class="ws-btn-primary w-100 justify-content-center">
-                                <span>SUBMIT CONSULTATION REQUEST</span>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </button>
-                        </form>
+                    <div class="ws-quote-card" id="wsHomeQuoteCard">
+                        <div id="wsHomeQuoteFormWrap">
+                            <h3>Get a Free Architecture Quote</h3>
+                            <p>Speak directly with our engineering architects today.</p>
+                            <form id="wsHomeQuoteForm" data-custom-handled="true" onsubmit="return handleHomeQuoteSubmit(event)">
+                                <div class="ws-form-group">
+                                    <input type="text" name="full_name" class="ws-input" placeholder="Your Full Name *" required>
+                                </div>
+                                <div class="ws-form-group">
+                                    <input type="email" name="email" class="ws-input" placeholder="Work Email Address *" required>
+                                </div>
+                                <div class="ws-form-group">
+                                    <input type="tel" name="phone" class="ws-input" placeholder="Phone / WhatsApp Number *" required>
+                                </div>
+                                <div class="ws-form-group">
+                                    <input type="text" name="website" class="ws-input" placeholder="Current Website (Optional)">
+                                </div>
+                                <div class="ws-form-group">
+                                    <textarea name="message" class="ws-input" placeholder="Tell us about your project or operational requirements..."></textarea>
+                                </div>
+                                <button type="submit" class="ws-btn-primary w-100 justify-content-center" id="wsHomeSubmitBtn">
+                                    <span>SUBMIT CONSULTATION REQUEST</span>
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div id="wsHomeQuoteSuccess" style="display: none; text-align: center; padding: 24px 12px; animation: wsFadeIn 0.3s ease;">
+                            <div style="width: 58px; height: 58px; border-radius: 50%; background: #ecfdf5; color: #10b981; font-size: 28px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 2px solid #a7f3d0; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.2);">✓</div>
+                            <h3 style="font-size: 21px; font-weight: 800; color: #065f46; margin-bottom: 8px;">Consultation Request Transmitted!</h3>
+                            <p style="font-size: 13.5px; color: #047857; margin-bottom: 20px; line-height: 1.6;">Thank you! Your project details have been transmitted directly to <strong>websirg@gmail.com</strong>. Our senior technical architect will evaluate your requirements and reach out within 24 hours.</p>
+                            <button type="button" onclick="resetHomeQuoteForm()" class="ws-btn-secondary" style="font-size: 13px; padding: 8px 18px; margin: 0 auto; display: inline-flex;">Send Another Request</button>
+                        </div>
                     </div>
-                </div>
+                    <script>
+                    async function handleHomeQuoteSubmit(event) {
+                        event.preventDefault();
+                        const form = event.target;
+                        const btn = document.getElementById('wsHomeSubmitBtn');
+                        const formWrap = document.getElementById('wsHomeQuoteFormWrap');
+                        const successCard = document.getElementById('wsHomeQuoteSuccess');
+
+                        btn.disabled = true;
+                        btn.innerHTML = '<span>TRANSMITTING TO WEBSIRG...</span>';
+
+                        if (window.submitWebsirgForm) {
+                            await window.submitWebsirgForm(form, {
+                                formType: 'Homepage Architecture Quote',
+                                subject: '🚀 New Architecture Quote Request from Websirg Homepage'
+                            });
+                        }
+
+                        formWrap.style.display = 'none';
+                        successCard.style.display = 'block';
+                        return false;
+                    }
+
+                    function resetHomeQuoteForm() {
+                        const form = document.getElementById('wsHomeQuoteForm');
+                        if (form) form.reset();
+                        const btn = document.getElementById('wsHomeSubmitBtn');
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerHTML = '<span>SUBMIT CONSULTATION REQUEST</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+                        }
+                        document.getElementById('wsHomeQuoteSuccess').style.display = 'none';
+                        document.getElementById('wsHomeQuoteFormWrap').style.display = 'block';
+                    }
+                    </script>
             </div>
         </div>
     </section>
@@ -1311,7 +1354,7 @@
                             <p style="font-size: 13px; color: #64748b; margin: 0;">Our senior tech leads will evaluate your specs and get back to you within 24 hours.</p>
                         </div>
 
-                        <form class="email_form" id="wsQuoteModalForm" method="post" onsubmit="return handleQuoteModalSubmit(event)">
+                        <form id="wsQuoteModalForm" data-custom-handled="true" onsubmit="return handleQuoteModalSubmit(event)">
                             <div class="row">
                                 <div class="col-md-6 mb-2">
                                     <input type="text" name="full_name" class="form-control" placeholder="Full Name *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />

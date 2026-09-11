@@ -60,9 +60,43 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     padding: 8px 0 !important;
   }
 
-  .site-logo {
-    max-height: 38px !important;
+  .navbar-header {
     width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-shrink: 0 !important;
+    order: 1 !important;
+  }
+
+  .navbar-brand,
+  .main-menu .navbar-brand {
+    width: auto !important;
+    max-width: 145px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .site-logo {
+    height: 36px !important;
+    max-height: 36px !important;
+    width: auto !important;
+    max-width: 135px !important;
+    aspect-ratio: 813 / 307 !important;
+    object-fit: contain !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    display: block !important;
+  }
+
+  .navbar-toggler {
+    order: 2 !important;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-shrink: 0 !important;
   }
 
   /* All Page Heroes: Clear Fixed Header with Perfect Breathing Room */

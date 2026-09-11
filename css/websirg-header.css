@@ -284,6 +284,44 @@ div[id] {
 /* -------------------------------------------------------------
    MOBILE MENU & TOGGLER
 ------------------------------------------------------------- */
+.navbar-header {
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  flex-shrink: 0 !important;
+  order: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-brand,
+.main-menu .navbar-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: 175px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.site-logo {
+  height: 42px !important;
+  max-height: 42px !important;
+  width: auto !important;
+  max-width: 160px !important;
+  aspect-ratio: 813 / 307 !important;
+  object-fit: contain !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  display: block !important;
+  border-radius: 6px;
+  transition: transform 0.25s ease;
+}
+
 .navbar-toggler {
   border: 1.5px solid #fed7aa !important;
   background: #fff7ed !important;
@@ -299,6 +337,7 @@ div[id] {
   gap: 3.5px !important;
   width: 40px !important;
   height: 38px !important;
+  flex-shrink: 0 !important;
 }
 
 .navbar-toggler .icon-bar {
@@ -312,6 +351,13 @@ div[id] {
   transition: all 0.25s ease !important;
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+@media (min-width: 992px) {
+  #navbar-collapse-1 {
+    display: flex !important;
+    flex-basis: auto !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -334,14 +380,48 @@ div[id] {
     flex-wrap: wrap !important;
     align-items: center !important;
     justify-content: space-between !important;
+    gap: 0 !important;
+  }
+
+  .navbar-header {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    order: 1 !important;
+  }
+
+  .navbar-brand,
+  .main-menu .navbar-brand {
+    width: auto !important;
+    max-width: 145px !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   .site-logo {
-    max-height: 38px !important;
+    height: 36px !important;
+    max-height: 36px !important;
     width: auto !important;
+    max-width: 135px !important;
+    aspect-ratio: 813 / 307 !important;
+    object-fit: contain !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    display: block !important;
+  }
+
+  .navbar-toggler {
+    order: 2 !important;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-shrink: 0 !important;
   }
 
   #navbar-collapse-1 {
+    display: none !important;
+  }
+
+  #navbar-collapse-1.show {
+    display: block !important;
     flex-basis: 100% !important;
     width: 100% !important;
     order: 10 !important;
@@ -354,6 +434,12 @@ div[id] {
     max-height: calc(85vh - 65px) !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
+    animation: wsMobileDrawerSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes wsMobileDrawerSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   #navbar-main .navbar-nav {
