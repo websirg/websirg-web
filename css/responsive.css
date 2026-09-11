@@ -246,11 +246,8 @@
         border-bottom: none;
         padding: 8px 12px;
     }
-    .main-menu .navbar-nav a:hover,
-    .main-menu .navbar-nav a:focus,
-    .main-menu .navbar-nav a:active {
+    .main-menu .navbar-nav a:hover {
         color: #ea580c !important;
-        background: #fff7ed !important;
     }
     .main-slider .btn.btn-fill,
     .main-slider .btn.btn-nofill {
