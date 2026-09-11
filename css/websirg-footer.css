@@ -170,13 +170,24 @@
 
 .ws-footer-logo-badge, .to-footer-logo-badge {
   display: inline-block;
-  margin-bottom: 16px;
+  background: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 12px !important;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.ws-footer-logo-badge:hover, .to-footer-logo-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .ws-footer-logo-badge img, .to-footer-logo-badge img {
-  max-height: 44px;
+  max-height: 40px;
   width: auto;
-  border-radius: 6px;
+  display: block;
+  border-radius: 4px;
 }
 
 .ws-footer-bio, .to-footer-bio {
