@@ -474,9 +474,46 @@ div[id] {
     border-bottom: none !important;
   }
 
-  #navbar-main .navbar-nav > li > a:hover,
-  #navbar-main .navbar-nav > li > a.active {
+/* Suppress duplicate CSS caret on dropdown toggles */
+#navbar-main .dropdown-toggle::after,
+.navbar-nav .dropdown-toggle::after,
+.main-menu .dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+}
+
+.ws-dropdown-arrow {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-left: 6px !important;
+  flex-shrink: 0 !important;
+}
+
+#navbar-main .dropdown.show .ws-dropdown-arrow,
+#navbar-main .dropdown.show > .dropdown-toggle .ws-dropdown-arrow {
+  transform: rotate(180deg) !important;
+}
+
+@media (max-width: 991px) {
+  /* Prevent touch devices from sticking :hover or :focus */
+  #navbar-main .navbar-nav > li > a:focus,
+  #navbar-main .dropdown-toggle:focus,
+  #navbar-main .dropdown-toggle:active {
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Only the actual active page link (not dropdown toggle) gets the highlight pill */
+  #navbar-main .navbar-nav > li > a.active:not(.dropdown-toggle) {
     background: #fff7ed !important;
+    color: #ea580c !important;
+    font-weight: 700 !important;
+  }
+
+  /* Dropdown Toggle when Open: subtle active text color, no box */
+  #navbar-main .dropdown.show > .dropdown-toggle {
+    background: transparent !important;
     color: #ea580c !important;
   }
 
@@ -511,6 +548,12 @@ div[id] {
     border-radius: 6px !important;
     text-decoration: none !important;
     border: none !important;
+  }
+
+  #navbar-main .dropdown-menu > li > a.active {
+    background: #fff7ed !important;
+    color: #ea580c !important;
+    font-weight: 700 !important;
   }
 
   #navbar-main .dropdown-menu > li > a:hover {

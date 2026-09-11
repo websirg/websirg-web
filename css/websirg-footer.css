@@ -676,21 +676,42 @@
   margin-top: 1px;
 }
 
-/* Adjust on Mobile */
-@media (max-width: 576px) {
+/* Adjust on Mobile / Tablets - Circular FAB */
+@media (max-width: 991px) {
   .ws-floating-connect {
-    bottom: 18px;
+    bottom: 20px;
     right: 18px;
   }
-  .ws-float-menu-card {
-    width: 290px;
+  .ws-float-btn {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
   .ws-float-btn span.ws-float-label {
     display: none;
   }
-  .ws-float-btn {
-    padding: 12px;
+  .ws-float-btn .ws-float-dot {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
     border-radius: 50%;
+    background: #10b981;
+  }
+  .ws-float-menu-card {
+    width: calc(100vw - 36px);
+    max-width: 320px;
+    right: 0;
+    bottom: 68px;
   }
 }
 

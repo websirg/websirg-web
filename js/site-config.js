@@ -68,7 +68,7 @@
         });
     }
 
-    // Highlight current active navigation link
+    // Highlight current active navigation link (strictly 1 active item)
     function highlightActiveNav() {
         let currentPage = window.location.pathname.split('/').pop();
         if (!currentPage || currentPage === '' || currentPage === '/') {
@@ -77,18 +77,13 @@
 
         const navLinks = document.querySelectorAll('#navbar-main .navbar-nav a');
         navLinks.forEach(link => {
+            link.classList.remove('active');
             const href = link.getAttribute('href');
             if (!href) return;
             const targetPage = href.split('/').pop();
 
             if (targetPage === currentPage) {
                 link.classList.add('active');
-                // Highlight parent dropdown if inside one
-                const parentDropdown = link.closest('.dropdown');
-                if (parentDropdown) {
-                    const toggle = parentDropdown.querySelector('.dropdown-toggle');
-                    if (toggle) toggle.classList.add('active');
-                }
             }
         });
     }
@@ -529,6 +524,18 @@
         });
     }
 
+    // Floating Connect Outside Click Dismiss
+    function setupFloatingConnect() {
+        document.addEventListener('click', (e) => {
+            const floatWidget = document.getElementById('wsFloatingConnect');
+            if (floatWidget && floatWidget.classList.contains('is-open')) {
+                if (!floatWidget.contains(e.target)) {
+                    floatWidget.classList.remove('is-open');
+                }
+            }
+        });
+    }
+
     // Run on DOM ready
     function init() {
         loadFallbackIncludes();
@@ -537,6 +544,7 @@
         setupStickyHeader();
         setupMobileNav();
         setupDropdownInteractions();
+        setupFloatingConnect();
         setupCounterAnimations();
         setupUniversalFormSubmissions();
     }
