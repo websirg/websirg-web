@@ -1,0 +1,345 @@
+/**
+ * Websirg - Universal Mobile Responsive & Layout Precision Stylesheet
+ * Guarantees zero text misalignment, perfect header spacing, and smooth mobile UX
+ */
+
+/* =============================================================
+   1. GLOBAL VIEWPORT & OVERFLOW LOCK (NO HORIZONTAL WOBBLE)
+============================================================= */
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+img, video, iframe, embed, object {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Text Wrapping Safeguard */
+p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* =============================================================
+   2. TABLETS & SMARTPHONES (MAX-WIDTH: 991px)
+============================================================= */
+@media (max-width: 991px) {
+  /* Header Sizing & Spacing */
+  #top {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .header-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 16px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  #navbar-main {
+    padding: 8px 0 !important;
+  }
+
+  .site-logo {
+    max-height: 38px !important;
+    width: auto !important;
+  }
+
+  /* All Page Heroes: Clear Fixed Header with Perfect Breathing Room */
+  .ws-home-hero,
+  .ws-about-hero,
+  .ws-services-hero,
+  .ws-contact-hero,
+  .ws-project-hero,
+  .ws-legal-hero,
+  .ws-blog-hero,
+  .to-about-hero,
+  .to-services-hero,
+  .to-contact-hero {
+    padding-top: 82px !important;
+    padding-bottom: 35px !important;
+  }
+
+  /* Headings Scaling */
+  .ws-hero-title {
+    font-size: 30px !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .ws-section-title {
+    font-size: 26px !important;
+    line-height: 1.26 !important;
+    letter-spacing: -0.4px !important;
+  }
+
+  .ws-hero-lead,
+  .ws-section-subtitle {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Section Spacing */
+  section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+}
+
+/* =============================================================
+   3. MOBILE PHONES (MAX-WIDTH: 767px)
+============================================================= */
+@media (max-width: 767px) {
+  /* Container Padding */
+  .container,
+  .container-fluid,
+  .ws-header-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+
+  .row > [class*="col-"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Typography */
+  .ws-hero-title {
+    font-size: 26px !important;
+    line-height: 1.24 !important;
+    letter-spacing: -0.4px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .ws-section-title {
+    font-size: 23px !important;
+    line-height: 1.28 !important;
+    letter-spacing: -0.3px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .ws-hero-lead,
+  .ws-section-subtitle {
+    font-size: 14px !important;
+    line-height: 1.62 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Badges on Mobile: Wrap Gracefully Without Overflow */
+  .ws-hero-badge,
+  .ws-topbar-badge,
+  .ws-footer-cta-badge,
+  .ws-about-badge,
+  .ws-section-badge {
+    white-space: normal !important;
+    text-align: left !important;
+    max-width: 100% !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    padding: 6px 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Action Buttons Full Width & Aligned */
+  .ws-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-bottom: 26px !important;
+  }
+
+  .ws-btn-primary,
+  .ws-btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* Metrics Strip & Stat Cards */
+  .ws-stats-strip {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .ws-stat-card {
+    padding: 10px 14px !important;
+    justify-content: flex-start !important;
+  }
+
+  .ws-stat-number {
+    font-size: 22px !important;
+  }
+
+  .ws-stat-label {
+    font-size: 12px !important;
+  }
+
+  /* Grids & Feature Cards */
+  .ws-services-grid,
+  .ws-case-grid,
+  .ws-counter-grid,
+  .ws-home-blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .ws-service-card,
+  .ws-case-card,
+  .ws-counter-item,
+  .ws-home-blog-card {
+    width: 100% !important;
+  }
+
+  /* Tech Stack Badges on About Page */
+  .ws-tech-badges-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+  }
+
+  .ws-tech-pill {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+  }
+
+  /* CTA Banners */
+  .ws-home-cta-card,
+  .ws-cta-card,
+  .ws-footer-cta-card {
+    padding: 26px 18px !important;
+    border-radius: 16px !important;
+    text-align: left !important;
+  }
+
+  .ws-home-cta-heading,
+  .ws-cta-heading,
+  .ws-footer-cta-title {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .ws-home-cta-desc,
+  .ws-cta-desc,
+  .ws-footer-cta-desc {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Forms on Mobile */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents iOS auto zoom on focus */
+    max-width: 100% !important;
+  }
+
+  .ws-footer-nl-form {
+    flex-direction: column !important;
+    padding: 8px !important;
+    gap: 8px !important;
+  }
+
+  .ws-footer-nl-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+  /* Floating Connect Widget */
+  .ws-floating-connect {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+
+  .ws-float-btn {
+    padding: 10px 16px !important;
+    font-size: 12.5px !important;
+  }
+
+  .ws-float-menu-card {
+    width: calc(100vw - 32px) !important;
+    right: 0 !important;
+    bottom: 56px !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Footer Bottom */
+  .ws-footer-bottom {
+    text-align: center !important;
+  }
+
+  .ws-footer-bottom-links {
+    margin-top: 10px !important;
+    justify-content: center !important;
+  }
+}
+
+/* =============================================================
+   4. SMALL PHONES (MAX-WIDTH: 420px)
+============================================================= */
+@media (max-width: 420px) {
+  .ws-hero-title {
+    font-size: 23px !important;
+    line-height: 1.25 !important;
+  }
+
+  .ws-section-title {
+    font-size: 21px !important;
+    line-height: 1.28 !important;
+  }
+
+  .ws-stat-card {
+    gap: 10px !important;
+    padding: 8px 10px !important;
+  }
+
+  .ws-stat-icon-wrapper {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .ws-stat-number {
+    font-size: 20px !important;
+  }
+
+  .site-logo {
+    max-height: 34px !important;
+  }
+}

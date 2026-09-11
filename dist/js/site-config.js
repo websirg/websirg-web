@@ -190,13 +190,60 @@
                 }
             });
 
-            // On Desktop: If clicking on a toggle with a valid page URL (like blog.html), navigate to it
+            // Handle Click for both Mobile and Desktop
             toggle.addEventListener('click', (e) => {
-                if (window.innerWidth >= 992) {
+                if (window.innerWidth < 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const isOpen = dd.classList.contains('show') || menu.classList.contains('show');
+                    if (isOpen) {
+                        dd.classList.remove('show');
+                        menu.classList.remove('show');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        dd.classList.add('show');
+                        menu.classList.add('show');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                } else {
                     const href = toggle.getAttribute('href');
                     if (href && href !== '#' && href !== 'javascript:void(0)') {
                         window.location.href = href;
                     }
+                }
+            });
+        });
+    }
+
+    // Native Rock-Solid Mobile Drawer Toggle
+    function setupMobileNav() {
+        const toggler = document.querySelector('.navbar-toggler');
+        const collapse = document.querySelector('#navbar-collapse-1');
+        if (!toggler || !collapse) return;
+
+        toggler.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = collapse.classList.contains('show');
+            if (isOpen) {
+                collapse.classList.remove('show');
+                toggler.classList.add('collapsed');
+                toggler.setAttribute('aria-expanded', 'false');
+            } else {
+                collapse.classList.add('show');
+                toggler.classList.remove('collapsed');
+                toggler.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Close drawer when clicking a non-dropdown nav link
+        const navLinks = collapse.querySelectorAll('.navbar-nav > li:not(.dropdown) > a, .ws-nav-cta, .dropdown-menu > li > a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    collapse.classList.remove('show');
+                    toggler.classList.add('collapsed');
+                    toggler.setAttribute('aria-expanded', 'false');
                 }
             });
         });
@@ -472,6 +519,7 @@
         loadConfig();
         highlightActiveNav();
         setupStickyHeader();
+        setupMobileNav();
         setupDropdownInteractions();
         setupCounterAnimations();
         setupUniversalFormSubmissions();
