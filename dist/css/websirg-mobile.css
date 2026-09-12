@@ -4,31 +4,14 @@
  */
 
 /* =============================================================
-   1. GLOBAL VIEWPORT & OVERFLOW LOCK (NO HORIZONTAL WOBBLE)
+   1. GLOBAL VIEWPORT LOCK (PREVENT HORIZONTAL SCROLL)
 ============================================================= */
 html, body {
-  width: 100% !important;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-  position: relative !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  -webkit-text-size-adjust: 100% !important;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box !important;
-}
-
-img, video, iframe, embed, object {
-  max-width: 100% !important;
-  height: auto;
-}
-
-/* Text Wrapping Safeguard */
-p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* =============================================================
@@ -92,11 +75,38 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     display: block !important;
   }
 
-  .navbar-toggler {
+  .navbar-toggler,
+  #wsMobileNavToggler {
     order: 2 !important;
     margin-left: auto !important;
     display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    width: 42px !important;
+    height: 40px !important;
     flex-shrink: 0 !important;
+    border: 1.5px solid #fed7aa !important;
+    background: #fff7ed !important;
+    border-radius: 10px !important;
+    padding: 7px 8px !important;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.12) !important;
+    cursor: pointer !important;
+    outline: none !important;
+  }
+
+  .navbar-toggler .icon-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2.5px !important;
+    background-color: #ea580c !important;
+    background: #ea580c !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    transition: all 0.25s ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   /* All Page Heroes: Clear Fixed Header with Perfect Breathing Room */
@@ -110,20 +120,20 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
   .to-about-hero,
   .to-services-hero,
   .to-contact-hero {
-    padding-top: 82px !important;
-    padding-bottom: 35px !important;
+    padding-top: 105px !important;
+    padding-bottom: 45px !important;
   }
 
   /* Headings Scaling */
   .ws-hero-title {
-    font-size: 30px !important;
+    font-size: 34px !important;
     line-height: 1.22 !important;
     letter-spacing: -0.5px !important;
   }
 
   .ws-section-title {
-    font-size: 26px !important;
-    line-height: 1.26 !important;
+    font-size: 28px !important;
+    line-height: 1.25 !important;
     letter-spacing: -0.4px !important;
   }
 
@@ -131,12 +141,6 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
   .ws-section-subtitle {
     font-size: 15px !important;
     line-height: 1.6 !important;
-  }
-
-  /* Section Spacing */
-  section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
   }
 
   /* Floating Live Chat & Agent Circular FAB (Tablets & Phones) */
@@ -223,34 +227,37 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
 
   /* Typography */
   .ws-hero-title {
-    font-size: 26px !important;
-    line-height: 1.24 !important;
+    font-size: clamp(23px, 6.5vw, 28px) !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
     letter-spacing: -0.4px !important;
     margin-bottom: 14px !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
   }
 
   .ws-section-title {
-    font-size: 23px !important;
-    line-height: 1.28 !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
     letter-spacing: -0.3px !important;
     margin-bottom: 10px !important;
   }
 
   .ws-hero-lead,
   .ws-section-subtitle {
-    font-size: 14px !important;
+    font-size: 14.5px !important;
     line-height: 1.62 !important;
     margin-bottom: 20px !important;
   }
 
-  /* Badges on Mobile: Wrap Gracefully Without Overflow */
+  /* Badges on Mobile */
   .ws-hero-badge,
   .ws-topbar-badge,
   .ws-footer-cta-badge,
   .ws-about-badge,
   .ws-section-badge {
-    white-space: normal !important;
-    text-align: left !important;
+    text-align: center !important;
     max-width: 100% !important;
     font-size: 11px !important;
     line-height: 1.4 !important;
@@ -266,7 +273,20 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     align-items: stretch !important;
     width: 100% !important;
     gap: 10px !important;
-    margin-bottom: 26px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Trust Signals on Mobile */
+  .ws-hero-trust-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+    margin-top: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .ws-hero-trust-item {
+    font-size: 12px !important;
   }
 
   .ws-btn-primary,
@@ -278,11 +298,11 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     font-size: 13.5px !important;
   }
 
-  /* Metrics Strip & Stat Cards */
+  /* Metrics Strip & Stat Cards: 2x2 Grid on Mobile */
   .ws-stats-strip {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
-    padding: 14px !important;
+    padding: 12px !important;
     border-radius: 12px !important;
   }
 

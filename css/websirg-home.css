@@ -280,6 +280,220 @@ html {
   border-color: rgba(249, 115, 22, 0.35);
 }
 
+/* Hero Trust Signals Row */
+.ws-hero-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.ws-hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.ws-hero-trust-item svg {
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------
+   HERO INTERACTIVE CONSOLE CARD (DESKTOP VISUAL)
+------------------------------------------------------------- */
+.ws-hero-visual-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(234, 88, 12, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.ws-hero-visual-card:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(249, 115, 22, 0.2);
+  transform: translateY(-3px);
+}
+
+.ws-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(2, 6, 23, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ws-console-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ws-dot-red { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; }
+.ws-dot-yellow { width: 10px; height: 10px; border-radius: 50%; background: #f59e0b; }
+.ws-dot-green { width: 10px; height: 10px; border-radius: 50%; background: #10b981; }
+
+.ws-console-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.4px;
+}
+
+.ws-console-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.ws-console-ping {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: wsDotPopUp 1.6s infinite ease-in-out;
+}
+
+.ws-console-body {
+  padding: 18px 20px;
+}
+
+.ws-console-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ws-console-stat-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.ws-console-stat-num {
+  font-size: 17px;
+  font-weight: 800;
+  color: #f97316;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.ws-console-stat-lbl {
+  font-size: 10.5px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.ws-console-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ws-console-module {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.ws-console-module:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(249, 115, 22, 0.3);
+  transform: translateX(3px);
+}
+
+.ws-console-module-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ws-console-module-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.ws-console-module-icon.blue { background: rgba(37, 99, 235, 0.15); color: #60a5fa; }
+.ws-console-module-icon.orange { background: rgba(234, 88, 12, 0.15); color: #fb923c; }
+.ws-console-module-icon.teal { background: rgba(13, 148, 136, 0.15); color: #2dd4bf; }
+.ws-console-module-icon.purple { background: rgba(124, 58, 237, 0.15); color: #c084fc; }
+
+.ws-console-module-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1.2;
+}
+
+.ws-console-module-desc {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.ws-console-module-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.ws-console-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-console-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
 /* Compact Metrics Strip */
 .ws-stats-strip {
   display: grid;
