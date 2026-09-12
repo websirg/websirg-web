@@ -138,6 +138,63 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     padding-top: 45px !important;
     padding-bottom: 45px !important;
   }
+
+  /* Floating Live Chat & Agent Circular FAB (Tablets & Phones) */
+  .ws-floating-connect {
+    bottom: 20px !important;
+    right: 18px !important;
+    z-index: 99998 !important;
+  }
+
+  .ws-float-btn {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45) !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+
+  .ws-float-btn span.ws-float-label {
+    display: none !important;
+  }
+
+  .ws-float-btn .ws-float-dot {
+    position: absolute !important;
+    top: 3px !important;
+    right: 3px !important;
+    width: 12px !important;
+    height: 12px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #10b981 !important;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.8) !important;
+    z-index: 2 !important;
+  }
+
+  .ws-float-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .ws-float-menu-card {
+    width: calc(100vw - 36px) !important;
+    max-width: 320px !important;
+    right: 0 !important;
+    bottom: 68px !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
+    border-radius: 18px !important;
+  }
 }
 
 /* =============================================================
@@ -315,62 +372,6 @@ p, span, a, h1, h2, h3, h4, h5, h6, li, label, div {
     padding: 10px !important;
   }
 
-  /* Floating Live Chat & Agent Circular FAB */
-  .ws-floating-connect {
-    bottom: 20px !important;
-    right: 18px !important;
-    z-index: 99998 !important;
-  }
-
-  .ws-float-btn {
-    width: 56px !important;
-    height: 56px !important;
-    min-width: 56px !important;
-    min-height: 56px !important;
-    padding: 0 !important;
-    border-radius: 50% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45) !important;
-    cursor: pointer !important;
-    border: none !important;
-  }
-
-  .ws-float-btn span.ws-float-label {
-    display: none !important;
-  }
-
-  .ws-float-btn .ws-float-dot {
-    position: absolute !important;
-    top: 3px !important;
-    right: 3px !important;
-    width: 12px !important;
-    height: 12px !important;
-    border: 2px solid #ffffff !important;
-    border-radius: 50% !important;
-    background: #10b981 !important;
-    box-shadow: 0 0 8px rgba(16, 185, 129, 0.8) !important;
-    z-index: 2 !important;
-  }
-
-  .ws-float-btn svg {
-    width: 24px !important;
-    height: 24px !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-
-  .ws-float-menu-card {
-    width: calc(100vw - 36px) !important;
-    max-width: 320px !important;
-    right: 0 !important;
-    bottom: 68px !important;
-    max-height: 75vh !important;
-    overflow-y: auto !important;
-    border-radius: 18px !important;
-  }
 
   /* Footer Bottom */
   .ws-footer-bottom {

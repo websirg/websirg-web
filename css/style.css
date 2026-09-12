@@ -797,9 +797,6 @@ header ul.header-right span.icon-envelope {
 }
 
 .main-menu .navbar-nav>li:not(.btn)>a:hover,
-.main-menu .navbar-nav>li:not(.btn)>a:focus,
-.main-menu .navbar-nav>li:not(.btn)>a:hover,
-.main-menu .navbar-nav>li:not(.btn)>a:active,
 .main-menu .navbar-nav>li:not(.btn)>a.active {
     background: none;
     border-bottom: 2px solid #fb8104;
@@ -862,10 +859,8 @@ header ul.header-right span.icon-envelope {
 }
 
 .main-menu .navbar-nav li.dropdown a.dropdown-toggle:after {
-    content: "\e93a";
-    font-family: "linearicons" !important;
-    margin-left: 10px;
-    font-size: 12px;
+    display: none !important;
+    content: none !important;
 }
 
 .navbar-right li.btn.btn-fill {
@@ -4898,10 +4893,10 @@ p {
 }
 
 .main-menu .navbar-nav li.dropdown a.dropdown-toggle:after {
+    display: none !important;
+    content: none !important;
     border: none;
-    margin: 0 10px;
-    vertical-align: middle;
-    line-height: 1;
+    margin: 0;
 }
 
 .main-menu .navbar-brand {
