@@ -68,7 +68,7 @@
         });
     }
 
-    // Highlight current active navigation link
+    // Highlight current active navigation link (strictly 1 active item)
     function highlightActiveNav() {
         let currentPage = window.location.pathname.split('/').pop();
         if (!currentPage || currentPage === '' || currentPage === '/') {
@@ -77,18 +77,13 @@
 
         const navLinks = document.querySelectorAll('#navbar-main .navbar-nav a');
         navLinks.forEach(link => {
+            link.classList.remove('active');
             const href = link.getAttribute('href');
             if (!href) return;
             const targetPage = href.split('/').pop();
 
             if (targetPage === currentPage) {
                 link.classList.add('active');
-                // Highlight parent dropdown if inside one
-                const parentDropdown = link.closest('.dropdown');
-                if (parentDropdown) {
-                    const toggle = parentDropdown.querySelector('.dropdown-toggle');
-                    if (toggle) toggle.classList.add('active');
-                }
             }
         });
     }
@@ -117,6 +112,8 @@
 
         applyConfig();
         highlightActiveNav();
+        setupMobileNav();
+        setupDropdownInteractions();
     }
 
     // Sticky Header Scroll Handler
@@ -190,15 +187,68 @@
                 }
             });
 
-            // On Desktop: If clicking on a toggle with a valid page URL (like blog.html), navigate to it
+            // Handle Click for both Mobile and Desktop
             toggle.addEventListener('click', (e) => {
-                if (window.innerWidth >= 992) {
+                if (window.innerWidth < 992) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const isOpen = dd.classList.contains('show') || menu.classList.contains('show');
+                    if (isOpen) {
+                        dd.classList.remove('show');
+                        menu.classList.remove('show');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        dd.classList.add('show');
+                        menu.classList.add('show');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                } else {
                     const href = toggle.getAttribute('href');
                     if (href && href !== '#' && href !== 'javascript:void(0)') {
                         window.location.href = href;
                     }
                 }
             });
+        });
+    }
+
+    // Native Rock-Solid Mobile Drawer Toggle (Delegated & Resilient)
+    let mobileNavInitialized = false;
+    function setupMobileNav() {
+        if (mobileNavInitialized) return;
+        mobileNavInitialized = true;
+
+        document.addEventListener('click', (e) => {
+            const toggler = e.target.closest('.navbar-toggler, #wsMobileNavToggler');
+            if (toggler) {
+                e.preventDefault();
+                e.stopPropagation();
+                const collapse = document.querySelector('#navbar-collapse-1');
+                if (!collapse) return;
+                const isOpen = collapse.classList.contains('show');
+                if (isOpen) {
+                    collapse.classList.remove('show');
+                    toggler.classList.add('collapsed');
+                    toggler.setAttribute('aria-expanded', 'false');
+                } else {
+                    collapse.classList.add('show');
+                    toggler.classList.remove('collapsed');
+                    toggler.setAttribute('aria-expanded', 'true');
+                }
+                return;
+            }
+
+            // Close mobile drawer when clicking a non-dropdown nav link
+            const navLink = e.target.closest('#navbar-collapse-1 .navbar-nav > li:not(.dropdown) > a, #navbar-collapse-1 .ws-nav-cta, #navbar-collapse-1 .dropdown-menu > li > a');
+            if (navLink && window.innerWidth < 992) {
+                const collapse = document.querySelector('#navbar-collapse-1');
+                const togglers = document.querySelectorAll('.navbar-toggler, #wsMobileNavToggler');
+                if (collapse) collapse.classList.remove('show');
+                togglers.forEach(t => {
+                    t.classList.add('collapsed');
+                    t.setAttribute('aria-expanded', 'false');
+                });
+            }
         });
     }
 
@@ -460,9 +510,29 @@
             if (statusMsg) {
                 statusMsg.style.display = 'block';
             } else {
-                alert('Thank you! Your information has been shared with the Websirg team (websirg@gmail.com). We will contact you within 24 hours.');
+                let successCard = form.querySelector('.ws-universal-success');
+                if (!successCard) {
+                    successCard = document.createElement('div');
+                    successCard.className = 'ws-universal-success';
+                    successCard.style.cssText = 'background: #ecfdf5; border: 1.5px solid #a7f3d0; border-radius: 10px; padding: 14px 16px; margin-top: 14px; text-align: center; color: #065f46; font-size: 13.5px; line-height: 1.55;';
+                    successCard.innerHTML = '<strong>✓ Request Transmitted Successfully!</strong><br>Your details have been transmitted directly to <strong>websirg@gmail.com</strong>. Our engineering leads will reach out within 24 hours.';
+                    form.appendChild(successCard);
+                }
+                successCard.style.display = 'block';
             }
             form.reset();
+        });
+    }
+
+    // Floating Connect Outside Click Dismiss
+    function setupFloatingConnect() {
+        document.addEventListener('click', (e) => {
+            const floatWidget = document.getElementById('wsFloatingConnect');
+            if (floatWidget && floatWidget.classList.contains('is-open')) {
+                if (!floatWidget.contains(e.target)) {
+                    floatWidget.classList.remove('is-open');
+                }
+            }
         });
     }
 
@@ -472,7 +542,9 @@
         loadConfig();
         highlightActiveNav();
         setupStickyHeader();
+        setupMobileNav();
         setupDropdownInteractions();
+        setupFloatingConnect();
         setupCounterAnimations();
         setupUniversalFormSubmissions();
     }

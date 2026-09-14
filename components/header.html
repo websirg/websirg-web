@@ -1,5 +1,6 @@
 <!-- Websirg Professional Header Component -->
 <link rel="stylesheet" href="css/websirg-header.css" />
+<link rel="stylesheet" href="css/websirg-mobile.css" />
 
 <div class="header-wrapper">
     <!-- Top Announcement & Contact Bar -->
@@ -44,12 +45,12 @@
             <!-- Brand Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.jpeg" alt="{{siteName}}" class="site-logo" />
+                    <img src="images/logo.png" alt="{{siteName}}" class="site-logo" />
                 </a>
             </div>
 
             <!-- Mobile Drawer Toggler -->
-            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler collapsed d-lg-none" id="wsMobileNavToggler" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -63,9 +64,9 @@
 
                     <!-- Services Dropdown -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-expanded="false" id="wsServicesDropdownToggle">
                             <span>Services</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg class="ws-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </a>
                         <ul class="dropdown-menu">
                             <li>

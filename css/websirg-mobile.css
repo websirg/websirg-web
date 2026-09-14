@@ -1,0 +1,438 @@
+/**
+ * Websirg - Universal Mobile Responsive & Layout Precision Stylesheet
+ * Guarantees zero text misalignment, perfect header spacing, and smooth mobile UX
+ */
+
+/* =============================================================
+   1. GLOBAL VIEWPORT LOCK (PREVENT HORIZONTAL SCROLL)
+============================================================= */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* =============================================================
+   2. TABLETS & SMARTPHONES (MAX-WIDTH: 991px)
+============================================================= */
+@media (max-width: 991px) {
+  /* Header Sizing & Spacing */
+  #top {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .header-wrapper {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 16px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  #navbar-main {
+    padding: 8px 0 !important;
+  }
+
+  .navbar-header {
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-shrink: 0 !important;
+    order: 1 !important;
+  }
+
+  .navbar-brand,
+  .main-menu .navbar-brand {
+    width: auto !important;
+    max-width: 145px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .site-logo {
+    height: 36px !important;
+    max-height: 36px !important;
+    width: auto !important;
+    max-width: 135px !important;
+    aspect-ratio: 813 / 307 !important;
+    object-fit: contain !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    display: block !important;
+  }
+
+  .navbar-toggler,
+  #wsMobileNavToggler {
+    order: 2 !important;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    width: 42px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+    border: 1.5px solid #fed7aa !important;
+    background: #fff7ed !important;
+    border-radius: 10px !important;
+    padding: 7px 8px !important;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.12) !important;
+    cursor: pointer !important;
+    outline: none !important;
+  }
+
+  .navbar-toggler .icon-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2.5px !important;
+    background-color: #ea580c !important;
+    background: #ea580c !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    transition: all 0.25s ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* All Page Heroes: Clear Fixed Header with Perfect Breathing Room */
+  .ws-home-hero,
+  .ws-about-hero,
+  .ws-services-hero,
+  .ws-contact-hero,
+  .ws-project-hero,
+  .ws-legal-hero,
+  .ws-blog-hero,
+  .to-about-hero,
+  .to-services-hero,
+  .to-contact-hero {
+    padding-top: 105px !important;
+    padding-bottom: 45px !important;
+  }
+
+  /* Headings Scaling */
+  .ws-hero-title {
+    font-size: 34px !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  .ws-section-title {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.4px !important;
+  }
+
+  .ws-hero-lead,
+  .ws-section-subtitle {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Floating Live Chat & Agent Circular FAB (Tablets & Phones) */
+  .ws-floating-connect {
+    bottom: 20px !important;
+    right: 18px !important;
+    z-index: 99998 !important;
+  }
+
+  .ws-float-btn {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45) !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+
+  .ws-float-btn span.ws-float-label {
+    display: none !important;
+  }
+
+  .ws-float-btn .ws-float-dot {
+    position: absolute !important;
+    top: 3px !important;
+    right: 3px !important;
+    width: 12px !important;
+    height: 12px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #10b981 !important;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.8) !important;
+    z-index: 2 !important;
+  }
+
+  .ws-float-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .ws-float-menu-card {
+    width: calc(100vw - 36px) !important;
+    max-width: 320px !important;
+    right: 0 !important;
+    bottom: 68px !important;
+    max-height: 75vh !important;
+    overflow-y: auto !important;
+    border-radius: 18px !important;
+  }
+}
+
+/* =============================================================
+   3. MOBILE PHONES (MAX-WIDTH: 767px)
+============================================================= */
+@media (max-width: 767px) {
+  /* Container Padding */
+  .container,
+  .container-fluid,
+  .ws-header-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .row {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+  }
+
+  .row > [class*="col-"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Typography */
+  .ws-hero-title {
+    font-size: clamp(23px, 6.5vw, 28px) !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.4px !important;
+    margin-bottom: 14px !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .ws-section-title {
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.3px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .ws-hero-lead,
+  .ws-section-subtitle {
+    font-size: 14.5px !important;
+    line-height: 1.62 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Badges on Mobile */
+  .ws-hero-badge,
+  .ws-topbar-badge,
+  .ws-footer-cta-badge,
+  .ws-about-badge,
+  .ws-section-badge {
+    text-align: center !important;
+    max-width: 100% !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    padding: 6px 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Action Buttons Full Width & Aligned */
+  .ws-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Trust Signals on Mobile */
+  .ws-hero-trust-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+    margin-top: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .ws-hero-trust-item {
+    font-size: 12px !important;
+  }
+
+  .ws-btn-primary,
+  .ws-btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    font-size: 13.5px !important;
+  }
+
+  /* Metrics Strip & Stat Cards: 2x2 Grid on Mobile */
+  .ws-stats-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+
+  .ws-stat-card {
+    padding: 10px 14px !important;
+    justify-content: flex-start !important;
+  }
+
+  .ws-stat-number {
+    font-size: 22px !important;
+  }
+
+  .ws-stat-label {
+    font-size: 12px !important;
+  }
+
+  /* Grids & Feature Cards */
+  .ws-services-grid,
+  .ws-case-grid,
+  .ws-counter-grid,
+  .ws-home-blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .ws-service-card,
+  .ws-case-card,
+  .ws-counter-item,
+  .ws-home-blog-card {
+    width: 100% !important;
+  }
+
+  /* Tech Stack Badges on About Page */
+  .ws-tech-badges-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    max-width: 100% !important;
+  }
+
+  .ws-tech-pill {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+  }
+
+  /* CTA Banners */
+  .ws-home-cta-card,
+  .ws-cta-card,
+  .ws-footer-cta-card {
+    padding: 26px 18px !important;
+    border-radius: 16px !important;
+    text-align: left !important;
+  }
+
+  .ws-home-cta-heading,
+  .ws-cta-heading,
+  .ws-footer-cta-title {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .ws-home-cta-desc,
+  .ws-cta-desc,
+  .ws-footer-cta-desc {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Forms on Mobile */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents iOS auto zoom on focus */
+    max-width: 100% !important;
+  }
+
+  .ws-footer-nl-form {
+    flex-direction: column !important;
+    padding: 8px !important;
+    gap: 8px !important;
+  }
+
+  .ws-footer-nl-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+
+  /* Footer Bottom */
+  .ws-footer-bottom {
+    text-align: center !important;
+  }
+
+  .ws-footer-bottom-links {
+    margin-top: 10px !important;
+    justify-content: center !important;
+  }
+}
+
+/* =============================================================
+   4. SMALL PHONES (MAX-WIDTH: 420px)
+============================================================= */
+@media (max-width: 420px) {
+  .ws-hero-title {
+    font-size: 23px !important;
+    line-height: 1.25 !important;
+  }
+
+  .ws-section-title {
+    font-size: 21px !important;
+    line-height: 1.28 !important;
+  }
+
+  .ws-stat-card {
+    gap: 10px !important;
+    padding: 8px 10px !important;
+  }
+
+  .ws-stat-icon-wrapper {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .ws-stat-number {
+    font-size: 20px !important;
+  }
+
+  .site-logo {
+    max-height: 34px !important;
+  }
+}

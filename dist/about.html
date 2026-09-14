@@ -35,6 +35,7 @@
     <div id="site-header">
 <!-- Websirg Professional Header Component -->
 <link rel="stylesheet" href="css/websirg-header.css" />
+<link rel="stylesheet" href="css/websirg-mobile.css" />
 
 <div class="header-wrapper">
     <!-- Top Announcement & Contact Bar -->
@@ -79,12 +80,12 @@
             <!-- Brand Logo -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.jpeg" alt="Websirg" class="site-logo" />
+                    <img src="images/logo.png" alt="Websirg" class="site-logo" />
                 </a>
             </div>
 
             <!-- Mobile Drawer Toggler -->
-            <button type="button" class="navbar-toggler collapsed d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" class="navbar-toggler collapsed d-lg-none" id="wsMobileNavToggler" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -98,9 +99,9 @@
 
                     <!-- Services Dropdown -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-expanded="false" id="wsServicesDropdownToggle">
                             <span>Services</span>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            <svg class="ws-dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -542,7 +543,7 @@
             <div class="ws-tech-badges-grid">
                 <div class="ws-tech-pill"><span class="ws-tech-dot blue"></span> React Native</div>
                 <div class="ws-tech-pill"><span class="ws-tech-dot cyan"></span> Flutter</div>
-                <div class="ws-tech-pill"><span class="ws-tech-dot orange"></span> Swift / iOS</div>
+                <div class="ws-tech-pill"><span class="ws-tech-dot orange"></span> <img src="images/apple-img.svg" alt="iOS" style="width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; display: inline-block;"> Swift / iOS</div>
                 <div class="ws-tech-pill"><span class="ws-tech-dot green"></span> Kotlin / Android</div>
                 <div class="ws-tech-pill"><span class="ws-tech-dot yellow"></span> Node.js</div>
                 <div class="ws-tech-pill"><span class="ws-tech-dot green"></span> Python &amp; Django</div>
@@ -636,7 +637,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="ws-footer-brand-wrap">
                         <a href="index.html" class="ws-footer-logo-badge">
-                            <img src="images/logo.jpeg" alt="Websirg" class="site-logo" />
+                            <img src="images/logo.png" alt="Websirg" class="site-logo" />
                         </a>
                         <p class="ws-footer-bio">
                             <span class="site-name">Websirg</span> is an elite digital engineering agency delivering high-velocity web platforms, mobile applications, cloud infrastructures, and digital growth strategies.
@@ -675,10 +676,21 @@
 
                         <!-- Social links -->
                         <div class="ws-footer-socials">
-                            <a href="#" aria-label="LinkedIn"><span class="icon-linkedin"></span></a>
-                            <a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a>
-                            <a href="#" aria-label="Instagram"><span class="icon-instagram"></span></a>
-                            <a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+                            <a href="https://www.instagram.com/websirg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@websirg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/websirg?ref=1" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -738,11 +750,11 @@
                             </div>
                         </div>
                         <div class="ws-trust-item">
-                            <div class="ws-trust-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                            <div class="ws-trust-icon ws-telemetry-beacon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="9" stroke="#10b981" stroke-opacity="0.35" fill="rgba(16,185,129,0.15)"></circle>
-                                    <circle cx="12" cy="12" r="3.5" fill="#10b981"></circle>
-                                    <path d="M12 3a9 9 0 0 1 9 9" stroke="#10b981" stroke-width="2.4"></path>
+                                    <circle cx="12" cy="12" r="3.5" fill="#10b981" class="ws-telemetry-core-dot"></circle>
+                                    <path d="M12 3a9 9 0 0 1 9 9" stroke="#10b981" stroke-width="2.4" class="ws-telemetry-radar-arc"></path>
                                 </svg>
                             </div>
                             <div class="ws-trust-text">
@@ -856,9 +868,9 @@
     </div>
 
     <!-- Main Floating Trigger Button -->
-    <button type="button" class="ws-float-btn" onclick="document.getElementById('wsFloatingConnect').classList.toggle('is-open')" aria-label="Direct Connect Menu">
+    <button type="button" class="ws-float-btn" onclick="document.getElementById('wsFloatingConnect').classList.toggle('is-open')" aria-label="Chat and Live Agent" title="Chat and Live Agent">
         <span class="ws-float-dot"></span>
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
         <span class="ws-float-label">Connect &bull; Live Agent</span>
     </button>
 </div>
@@ -893,7 +905,7 @@
                             <p style="font-size: 13px; color: #64748b; margin: 0;">Our senior tech leads will evaluate your specs and get back to you within 24 hours.</p>
                         </div>
 
-                        <form class="email_form" id="wsQuoteModalForm" method="post" onsubmit="return handleQuoteModalSubmit(event)">
+                        <form id="wsQuoteModalForm" data-custom-handled="true" onsubmit="return handleQuoteModalSubmit(event)">
                             <div class="row">
                                 <div class="col-md-6 mb-2">
                                     <input type="text" name="full_name" class="form-control" placeholder="Full Name *" required style="border-radius: 8px; border: 1.5px solid #e2e8f0; padding: 10px 14px; font-size: 13.5px;" />
