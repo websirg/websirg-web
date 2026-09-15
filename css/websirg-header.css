@@ -392,6 +392,7 @@ div[id] {
   flex-shrink: 0 !important;
   display: inline-block !important;
   vertical-align: middle !important;
+  pointer-events: none !important;
 }
 
 #navbar-main .dropdown.show .ws-dropdown-arrow,

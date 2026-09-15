@@ -73,13 +73,15 @@ $(function() {
     //end script for page scroll to top and bottom
 
     // Content Slider
-    $(".content-slider").owlCarousel({
-        slideSpeed: 350,
-        singleItem: true,
-        autoHeight: true,
-        navigation: true,
-        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"]
-    });
+    if ($.fn.owlCarousel && $(".content-slider").length) {
+        $(".content-slider").owlCarousel({
+            slideSpeed: 350,
+            singleItem: true,
+            autoHeight: true,
+            navigation: true,
+            navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"]
+        });
+    }
 
     //script for parallax
     function parallaxIt() {
@@ -133,98 +135,104 @@ $(function() {
     //end script for parallex
 
     //script for owl carousel 
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 13,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3,
-                nav: false
-            },
-            900: {
-                items: 5,
-                loop: true
-            },
-            1100: {
-                items: 6,
-                loop: true
+    if ($.fn.owlCarousel && $('.owl-carousel').length) {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 13,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                900: {
+                    items: 5,
+                    loop: true
+                },
+                1100: {
+                    items: 6,
+                    loop: true
+                }
             }
-        }
-    });
+        });
+    }
     //end script for owl carousel 
 
     //script for video modal 
-    $('.video-popup').magnificPopup({
-        items: {
-            src: 'https://www.youtube.com/watch?v=uH0UQl5JC2c'
-        },
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                '<div class="mfp-close"></div>' +
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                '</div>',
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/',
-                    id: 'v=',
-                    src: '//www.youtube.com/embed/%id%?autoplay=1'
-                }
+    if ($.fn.magnificPopup) {
+        $('.video-popup').magnificPopup({
+            items: {
+                src: 'https://www.youtube.com/watch?v=uH0UQl5JC2c'
             },
-            srcAction: 'iframe_src'
-        }
-    });
-    $('.video-popup2').magnificPopup({
-        items: {
-            src: 'https://www.youtube.com/watch?v=Fz-6MdlPY1M'
-        },
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                '<div class="mfp-close"></div>' +
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                '</div>',
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/',
-                    id: 'v=',
-                    src: '//www.youtube.com/embed/%id%?autoplay=1'
-                }
+            type: 'iframe',
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div>',
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+                        id: 'v=',
+                        src: '//www.youtube.com/embed/%id%?autoplay=1'
+                    }
+                },
+                srcAction: 'iframe_src'
+            }
+        });
+        $('.video-popup2').magnificPopup({
+            items: {
+                src: 'https://www.youtube.com/watch?v=Fz-6MdlPY1M'
             },
-            srcAction: 'iframe_src'
-        }
-    });
-    $('.video-popup3').magnificPopup({
-        items: {
-            src: 'https://www.youtube.com/watch?v=rrT6v5sOwJg'
-        },
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                '<div class="mfp-close"></div>' +
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                '</div>',
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/',
-                    id: 'v=',
-                    src: '//www.youtube.com/embed/%id%?autoplay=1'
-                }
+            type: 'iframe',
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div>',
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+                        id: 'v=',
+                        src: '//www.youtube.com/embed/%id%?autoplay=1'
+                    }
+                },
+                srcAction: 'iframe_src'
+            }
+        });
+        $('.video-popup3').magnificPopup({
+            items: {
+                src: 'https://www.youtube.com/watch?v=rrT6v5sOwJg'
             },
-            srcAction: 'iframe_src'
-        }
-    });
+            type: 'iframe',
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '</div>',
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+                        id: 'v=',
+                        src: '//www.youtube.com/embed/%id%?autoplay=1'
+                    }
+                },
+                srcAction: 'iframe_src'
+            }
+        });
+    }
     //end script for video modal     
 
     //script for number counter
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
+    if ($.fn.counterUp && $('.counter').length) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    }
     //end script for number counter
 
     //script for full view port slider 
