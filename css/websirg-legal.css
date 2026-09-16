@@ -121,9 +121,13 @@ body.ws-legal-page {
   top: 100px;
   background: #ffffff;
   border: 1px solid var(--ws-card-border);
-  border-radius: 16px;
-  padding: 22px 20px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  border-radius: 20px;
+  padding: 26px 20px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.05);
+  /* Fully expanded card without internal scrollbar */
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
 }
 
 .ws-sidebar-title {
@@ -178,6 +182,27 @@ body.ws-legal-page {
   margin-bottom: 30px;
   padding-bottom: 26px;
   border-bottom: 1px solid #f1f5f9;
+  scroll-margin-top: 100px;
+}
+
+.ws-legal-section h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ws-legal-section h4::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--ws-primary);
+  border-radius: 2px;
 }
 
 .ws-legal-section:last-child {
